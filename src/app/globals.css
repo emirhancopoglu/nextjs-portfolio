@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* next-themes  ~~ default light theme */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+/* next-themes ~~ dark theme */
+[data-theme="dark"] {
+  --background: #1a1a1d;
+  --foreground: #fafaf9;
 }
 
 @media (prefers-color-scheme: dark) {

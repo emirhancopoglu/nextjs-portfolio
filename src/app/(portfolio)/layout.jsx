@@ -1,5 +1,7 @@
 "use client";
 import "@/app/globals.css";
+import { ThemeSwitchProvider } from "@/context/theme-context";
+import { ThemeProvider } from "next-themes";
 import { TerminalContextProvider } from "react-terminal";
 
 // const geistSans = localFont({
@@ -24,7 +26,11 @@ export default function RootLayout({ children }) {
         //${geistSans.variable} ${geistMono.variable}
         className={` antialiased`}
       >
-        <TerminalContextProvider> {children}</TerminalContextProvider>
+        <ThemeProvider>
+          <ThemeSwitchProvider>
+            <TerminalContextProvider> {children}</TerminalContextProvider>
+          </ThemeSwitchProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,16 +1,22 @@
 "use client";
 import { ReactTerminal } from "react-terminal";
+import { useThemeContext } from "@/context/theme-context";
 import Container from "@/components/utils/container";
 import { FaFilePdf } from "react-icons/fa6";
 
 export default function TerminalPage() {
+  const { theme } = useThemeContext();
+  {
+    console.log("thema", theme);
+  }
+
   const commands = {
     help: (
       <>
         <br />
         <span className="text-[#7286D3] font-bold">
-          Mevcut komutlar:
-          {""} about, resume, mail, help, clear
+          <span className="text-[#1F509A] font-bold">Mevcut komutlar: </span>{" "}
+          about, resume, mail, help, clear
         </span>
         <br />
       </>
@@ -64,7 +70,8 @@ export default function TerminalPage() {
     <>
       (c) Microsoft Corporation. Tüm hakları saklıdır.
       <br /> <br />
-      <span>Bir komut yaz ve enter'a tıkla. Varsayılan komutlar:</span>
+      Bir komut yaz ve enter'a tıkla.{" "}
+      <span className="text-[#7286D3] font-bold"> Varsayılan komutlar:</span>
       <span className="text-[#7286D3] font-bold">
         {" "}
         about, resume, mail, help, clear
@@ -86,10 +93,12 @@ export default function TerminalPage() {
             welcomeMessage={welcomeMessage}
             themes={{
               "custom-theme": {
-                themeBGColor: "#F0F0F0",
-                themeToolbarColor: "#F0F0F0",
-                themeColor: "#4C4C6D",
-                themePromptColor: "#325288",
+                themeBGColor: `${theme === "light" ? "#F0F0F0" : "#2B2B30"}`,
+                themeToolbarColor: `${
+                  theme === "light" ? "#F0F0F0" : "#2B2B30"
+                }`,
+                themeColor: `${theme === "light" ? "#4C4C6D" : "#B2B2B2"}`,
+                themePromptColor: "#F05454",
               },
             }}
             theme="custom-theme"
