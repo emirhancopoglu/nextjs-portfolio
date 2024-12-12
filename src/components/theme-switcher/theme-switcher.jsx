@@ -6,6 +6,7 @@ import { IoSunnyOutline } from "react-icons/io5";
 
 export default function ThemeSwitcherButtons() {
   const { theme, setTheme } = useThemeContext();
+
   return (
     <>
       {theme === "light" ? (
