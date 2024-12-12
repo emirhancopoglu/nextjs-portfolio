@@ -5,17 +5,21 @@ import { useState } from "react";
 import { FaFilePdf } from "react-icons/fa6";
 import Container from "@/components/utils/container";
 import Projects from "@/components/projects/projects";
+import { useTranslation } from "react-i18next";
 
 export default function TerminalPage() {
   const { theme } = useThemeContext();
   const [checkInput, setCheckInput] = useState("");
+  const { t } = useTranslation();
 
   const commands = {
     help: (
       <>
         <br />
         <span className="text-[#7286D3] font-bold">
-          <span className="text-[#1F509A] font-bold">Mevcut komutlar: </span>{" "}
+          <span className="text-[#1F509A] font-bold">
+            {t("availableCommand")}
+          </span>
           about, resume, projects, mail, help, clear
         </span>
         <br />
@@ -24,15 +28,7 @@ export default function TerminalPage() {
     about: (
       <>
         <br />
-        <span className="text-[#7286D3] font-bold">
-          2023 yılından beri web geliştirme konusunda tecrübeli ve kendini
-          geliştirmeye devam eden frontend geliştiricisiyim. ReactJS ve Tailwind
-          CSS konusunda deneyimliyim. Çeşitli freelance projeler aracılığıyla,
-          react-i18next ile çok dilli web sayfaları, React Helmet ile SEO
-          optimizasyonu ve Framer Motion, Ant Design gibi araçları kullanarak
-          kullanıcı deneyimini geliştirmekteyim. Güvenilir ve özverili takım
-          oyuncusuyum.
-        </span>
+        <span className="text-[#7286D3] font-bold">{t("about")}</span>
         <br />
       </>
     ),
@@ -40,7 +36,7 @@ export default function TerminalPage() {
       <>
         <br />
         <span className="text-[#7286D3] font-bold">
-          Bana buradan ulaşabilirsin,
+          {t("mail")}
           <a href="mailto:copogluemirhan@outlook.com">{""} e-mail</a>
         </span>
         <br />
@@ -49,9 +45,7 @@ export default function TerminalPage() {
     resume: (
       <>
         <br />
-        <span className="text-[#7286D3] font-bold">
-          Özgeçmiş hazırlandı, indirebilirsin,
-        </span>
+        <span className="text-[#7286D3] font-bold">{t("resume")}</span>
         <a
           href="https://drive.google.com/file/d/1RQ1cLz8N03LX2n5uXMp3FbrmF1ySmZhB/view?usp=sharing"
           target="_blank"
@@ -68,10 +62,10 @@ export default function TerminalPage() {
 
   const welcomeMessage = (
     <>
-      (c) Microsoft Corporation. Tüm hakları saklıdır.
+      (c) Microsoft Corporation. {t("reserved")}
       <br /> <br />
-      Bir komut yaz ve enter'a tıkla.{" "}
-      <span className="text-[#7286D3] font-bold"> Varsayılan komutlar:</span>
+      {t("typeCommand")}
+      <span className="text-[#7286D3] font-bold">{t("defaultCommand")}</span>
       <span className="text-[#7286D3] font-bold">
         {" "}
         about, resume, projects, mail, help, clear
@@ -86,7 +80,7 @@ export default function TerminalPage() {
       return (
         <span className="text-[#7286D3] font-bold">
           <br />
-          Projeler gösterildi.
+          {t("projects")}
           <br />
         </span>
       );
@@ -108,7 +102,7 @@ export default function TerminalPage() {
                   }`}
                   onClick={() => setCheckInput("")}
                 >
-                  <p className="text-sm">Terminal'e Geri Dön</p>
+                  <p className="text-sm">{t("backToTerminal")}</p>
                 </button>
               </div>
               <Projects />

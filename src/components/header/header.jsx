@@ -3,6 +3,7 @@ import React from "react";
 import Container from "@/components/utils/container";
 import ThemeSwitcherButtons from "@/components/theme-switcher/theme-switcher";
 import { useThemeContext } from "@/context/theme-context";
+import LanguageSwitcher from "@/components/lang-switcher/lang-switcher";
 
 export default function Header() {
   const { theme } = useThemeContext();
@@ -20,7 +21,10 @@ export default function Header() {
               Frontend Developer
             </h1>
           </div>
-          <ThemeSwitcherButtons />
+          <div className="flex flex-row items-center justify-center gap-4">
+            <LanguageSwitcher />
+            <ThemeSwitcherButtons />
+          </div>
         </header>
       </Container>
     </>

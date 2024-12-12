@@ -3,7 +3,7 @@ import "@/app/globals.css";
 import { ThemeSwitchProvider } from "@/context/theme-context";
 import { ThemeProvider } from "next-themes";
 import { TerminalContextProvider } from "react-terminal";
-
+import "@/i18next";
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
 //   variable: "--font-geist-sans",
