@@ -1,14 +1,14 @@
 "use client";
 import { ReactTerminal } from "react-terminal";
 import { useThemeContext } from "@/context/theme-context";
-import Container from "@/components/utils/container";
+import { useState } from "react";
 import { FaFilePdf } from "react-icons/fa6";
+import Container from "@/components/utils/container";
+import Projects from "@/components/projects/projects";
 
 export default function TerminalPage() {
   const { theme } = useThemeContext();
-  {
-    console.log("thema", theme);
-  }
+  const [checkInput, setCheckInput] = useState("");
 
   const commands = {
     help: (
@@ -16,7 +16,7 @@ export default function TerminalPage() {
         <br />
         <span className="text-[#7286D3] font-bold">
           <span className="text-[#1F509A] font-bold">Mevcut komutlar: </span>{" "}
-          about, resume, mail, help, clear
+          about, resume, projects, mail, help, clear
         </span>
         <br />
       </>
@@ -74,38 +74,65 @@ export default function TerminalPage() {
       <span className="text-[#7286D3] font-bold"> Varsayılan komutlar:</span>
       <span className="text-[#7286D3] font-bold">
         {" "}
-        about, resume, mail, help, clear
+        about, resume, projects, mail, help, clear
       </span>
       <br />
     </>
   );
 
   const handleDefaultCommand = (userInput) => {
-    return `Komut bulunamadı: ${userInput}`;
+    setCheckInput(userInput);
+    if (userInput === "projects") {
+      return (
+        <span className="text-[#7286D3] font-bold">
+          <br />
+          Projeler gösterildi.
+          <br />
+        </span>
+      );
+    } else {
+      return `Komut bulunamadı: ${userInput}`;
+    }
   };
 
   return (
     <>
       <Container>
         <div className="h-[47rem] pt-4 ">
-          <ReactTerminal
-            commands={commands}
-            welcomeMessage={welcomeMessage}
-            themes={{
-              "custom-theme": {
-                themeBGColor: `${theme === "light" ? "#F0F0F0" : "#2B2B30"}`,
-                themeToolbarColor: `${
-                  theme === "light" ? "#F0F0F0" : "#2B2B30"
-                }`,
-                themeColor: `${theme === "light" ? "#4C4C6D" : "#B2B2B2"}`,
-                themePromptColor: "#F05454",
-              },
-            }}
-            theme="custom-theme"
-            errorMessage="Komut bulunamadı."
-            prompt=" C:\Users\Jarvis>"
-            defaultHandler={handleDefaultCommand}
-          />
+          {checkInput === "projects" ? (
+            <>
+              <div className="flex justify-end">
+                <button
+                  className={`border p-2 rounded-lg hover:scale-95 transition-all duration-300 ${
+                    theme === "dark" ? "border-gray-500" : "border-gray-200"
+                  }`}
+                  onClick={() => setCheckInput("")}
+                >
+                  <p className="text-sm">Terminal'e Geri Dön</p>
+                </button>
+              </div>
+              <Projects />
+            </>
+          ) : (
+            <ReactTerminal
+              commands={commands}
+              welcomeMessage={welcomeMessage}
+              themes={{
+                "custom-theme": {
+                  themeBGColor: `${theme === "light" ? "#F0F0F0" : "#2B2B30"}`,
+                  themeToolbarColor: `${
+                    theme === "light" ? "#F0F0F0" : "#2B2B30"
+                  }`,
+                  themeColor: `${theme === "light" ? "#4C4C6D" : "#B2B2B2"}`,
+                  themePromptColor: "#F05454",
+                },
+              }}
+              theme="custom-theme"
+              errorMessage="Komut bulunamadı."
+              prompt=" C:\Users\Jarvis>"
+              defaultHandler={handleDefaultCommand}
+            />
+          )}
         </div>
       </Container>
     </>

@@ -11,7 +11,7 @@ export default function Header() {
       <Container>
         <header
           className={`flex flex-row justify-between items-center w-full pt-4 pb-2 border-b ${
-            theme === "dark" ? "border-gray-400" : ""
+            theme === "dark" ? "border-gray-500" : ""
           } `}
         >
           <div className="flex flex-col">
