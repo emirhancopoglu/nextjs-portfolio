@@ -1,11 +1,11 @@
 "use client";
-import { ReactTerminal } from "react-terminal";
-import { useThemeContext } from "@/context/theme-context";
 import { useState } from "react";
-import { FaFilePdf } from "react-icons/fa6";
+import { ReactTerminal } from "react-terminal";
+import { useTranslation } from "react-i18next";
+import { useThemeContext } from "@/context/theme-context";
 import Container from "@/components/utils/container";
 import Projects from "@/components/projects/projects";
-import { useTranslation } from "react-i18next";
+import { FaFilePdf } from "react-icons/fa6";
 
 export default function TerminalPage() {
   const { theme } = useThemeContext();
@@ -102,7 +102,7 @@ export default function TerminalPage() {
                   }`}
                   onClick={() => setCheckInput("")}
                 >
-                  <p className="text-sm text-gray-500 font-mono font-bold">
+                  <p className="text-sm text-gray-500 font-bold">
                     {t("backToTerminal")}
                   </p>
                 </button>

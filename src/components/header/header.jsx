@@ -2,8 +2,8 @@
 import React from "react";
 import Container from "@/components/utils/container";
 import ThemeSwitcherButtons from "@/components/theme-switcher/theme-switcher";
-import { useThemeContext } from "@/context/theme-context";
 import LanguageSwitcher from "@/components/lang-switcher/lang-switcher";
+import { useThemeContext } from "@/context/theme-context";
 
 export default function Header() {
   const { theme } = useThemeContext();
@@ -17,7 +17,7 @@ export default function Header() {
         >
           <div className="flex flex-col">
             <h1 className="font-bold text-2xl">Emirhan Çöpoğlu</h1>
-            <h1 className="font-mono font-bold text-sm text-gray-500">
+            <h1 className="font-bold text-sm text-gray-500">
               Frontend Developer
             </h1>
           </div>
