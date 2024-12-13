@@ -85,14 +85,14 @@ export default function TerminalPage() {
         </span>
       );
     } else {
-      return `Komut bulunamadı: ${userInput}`;
+      return `${t("notFoundCommand")} ${userInput}`;
     }
   };
 
   return (
     <>
       <Container>
-        <div className="h-[47rem] pt-4 ">
+        <div className="h-[47rem] pt-4 max-2xl:pl-4 max-2xl:pr-4">
           {checkInput === "projects" ? (
             <>
               <div className="flex justify-end">
@@ -102,7 +102,9 @@ export default function TerminalPage() {
                   }`}
                   onClick={() => setCheckInput("")}
                 >
-                  <p className="text-sm">{t("backToTerminal")}</p>
+                  <p className="text-sm text-gray-500 font-mono font-bold">
+                    {t("backToTerminal")}
+                  </p>
                 </button>
               </div>
               <Projects />
@@ -122,7 +124,7 @@ export default function TerminalPage() {
                 },
               }}
               theme="custom-theme"
-              errorMessage="Komut bulunamadı."
+              errorMessage={t("notFoundCommand")}
               prompt=" C:\Users\Jarvis>"
               defaultHandler={handleDefaultCommand}
             />

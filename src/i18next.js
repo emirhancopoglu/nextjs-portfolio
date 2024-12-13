@@ -14,6 +14,7 @@ const resources = {
       backToTerminal: "Back to Terminal",
       projects: "Projects were shown.",
       mail: "You can contact me via,",
+      notFoundCommand: "Command not found: ",
     },
   },
   tr: {
@@ -28,6 +29,7 @@ const resources = {
       backToTerminal: "Terminal'e Geri Dön",
       projects: "Projeler gösterildi.",
       mail: "Bana buradan ulaşabilirsin, ",
+      notFoundCommand: "Komut bulunamadı: ",
     },
   },
 };

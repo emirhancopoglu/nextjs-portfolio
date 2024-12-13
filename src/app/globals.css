@@ -26,6 +26,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Terminal CSS */
 #terminalEditor {
   padding: 3rem;
+}
+
+@media screen and (max-width: 1536px) {
+  #terminalEditor {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
