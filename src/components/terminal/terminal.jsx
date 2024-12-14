@@ -92,7 +92,7 @@ export default function TerminalPage() {
   return (
     <>
       <Container>
-        <div className="h-[47rem] pt-4 max-2xl:pl-4 max-2xl:pr-4">
+        <div className="h-[47rem] max-lg:h-screen pt-4 max-2xl:pl-4 max-2xl:pr-4">
           {checkInput === "projects" ? (
             <>
               <div className="flex justify-end">
