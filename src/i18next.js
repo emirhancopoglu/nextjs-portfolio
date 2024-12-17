@@ -15,6 +15,15 @@ const resources = {
       projects: "Projects were shown.",
       mail: "You can contact me via,",
       notFoundCommand: "Command not found: ",
+      ViraGasDescription:
+        "As a freelance Frontend Developer, I developed a website for a company that produces gas springs and springs.",
+      ViraGasWhatIDid:
+        "I made the existing design modern and user-friendly, responsive, SEO optimized and added multi-language support.",
+      NiksaMetalDescription:
+        "As a freelance Frontend Developer, I developed a website for a company that produces table and chair legs from profile iron and steel.",
+      NiksaMetalWhatIDid:
+        "I created a modern, responsive design from scratch. I used the Ant Design library for the product photo gallery.",
+      WhatIDid: "My Role in This Project",
     },
   },
   tr: {
@@ -30,6 +39,15 @@ const resources = {
       projects: "Projeler gösterildi.",
       mail: "Bana buradan ulaşabilirsin, ",
       notFoundCommand: "Komut bulunamadı: ",
+      ViraGasDescription:
+        "Frontend Developer pozisyonunda freelance olarak, gazlı amörtisör ve yay üreten firma için web sitesi geliştirdim.",
+      ViraGasWhatIDid:
+        "Mevcut tasarımı modern ve kullanıcı dostu hale getirdim, duyarlı (responsive) yapıya kavuşturdum. SEO optimizasyonu gerçekleştirdim ve çoklu dil desteği ekledim.",
+      NiksaMetalDescription:
+        "Frontend Developer pozisyonunda freelance olarak, profil demir ve çelikten masa, sandalye ayağı üreten firma için web sitesi geliştirdim.",
+      NiksaMetalWhatIDid:
+        "Sıfırdan modern, duyarlı (responsive) tasarım oluşturdum. Ürün fotoğraf galerisi için Ant Design kütüphanesini kullandım.",
+      WhatIDid: "Bu projedeki rolüm",
     },
   },
 };

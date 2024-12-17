@@ -96,7 +96,7 @@ export default function TerminalPage() {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "100%", opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="h-[47rem]  max-lg:h-screen pt-4 max-2xl:pl-4 max-2xl:pr-4 overflow-hidden"
+            className="h-[47rem] max-lg:h-full  pt-4 max-2xl:pl-4 max-2xl:pr-4 overflow-hidden"
           >
             <div className="flex justify-end">
               <button
