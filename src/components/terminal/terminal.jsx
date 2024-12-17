@@ -100,7 +100,7 @@ export default function TerminalPage() {
           >
             <div className="flex justify-end">
               <button
-                className={`  border p-2 rounded-lg hover:scale-95 transition-all duration-300 ${
+                className={`border p-2 rounded-lg hover:scale-95 transition-all duration-300 text-black ${
                   theme === "dark" ? "bg-gray-300 , text-black" : "bg-[#F4F4F5]"
                 }`}
                 onClick={() => setCheckInput("")}
