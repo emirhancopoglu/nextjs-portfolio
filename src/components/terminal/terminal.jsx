@@ -6,6 +6,7 @@ import { useThemeContext } from "@/context/theme-context";
 import Container from "@/components/utils/container";
 import Projects from "@/components/projects/projects";
 import { FaFilePdf } from "react-icons/fa6";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function TerminalPage() {
   const { theme } = useThemeContext();
@@ -37,7 +38,7 @@ export default function TerminalPage() {
         <br />
         <span className="text-[#7286D3] font-bold">
           {t("mail")}
-          <a href="mailto:copogluemirhan@outlook.com">{""} e-mail</a>
+          <a href="mailto:copogluemirhan@outlook.com"> e-mail</a>
         </span>
         <br />
       </>
@@ -50,11 +51,7 @@ export default function TerminalPage() {
           href="https://drive.google.com/file/d/1RQ1cLz8N03LX2n5uXMp3FbrmF1ySmZhB/view?usp=sharing"
           target="_blank"
         >
-          <FaFilePdf
-            className=" mt-4"
-            size={70}
-            href="https://drive.google.com/file/d/1RQ1cLz8N03LX2n5uXMp3FbrmF1ySmZhB/view?usp=sharing"
-          />
+          <FaFilePdf className="mt-4" size={70} />
         </a>
       </>
     ),
@@ -75,8 +72,8 @@ export default function TerminalPage() {
   );
 
   const handleDefaultCommand = (userInput) => {
-    setCheckInput(userInput);
     if (userInput === "projects") {
+      setCheckInput("projects");
       return (
         <span className="text-[#7286D3] font-bold">
           <br />
@@ -90,26 +87,38 @@ export default function TerminalPage() {
   };
 
   return (
-    <>
-      <Container>
-        <div className="h-[47rem] max-lg:h-screen pt-4 max-2xl:pl-4 max-2xl:pr-4">
-          {checkInput === "projects" ? (
-            <>
-              <div className="flex justify-end">
-                <button
-                  className={`border p-2 rounded-lg hover:scale-95 transition-all duration-300 ${
-                    theme === "dark" ? "border-gray-500" : "border-gray-200"
-                  }`}
-                  onClick={() => setCheckInput("")}
-                >
-                  <p className="text-sm text-gray-500 font-bold">
-                    {t("backToTerminal")}
-                  </p>
-                </button>
-              </div>
-              <Projects />
-            </>
-          ) : (
+    <Container>
+      <AnimatePresence mode="wait">
+        {checkInput === "projects" ? (
+          <motion.div
+            key="projects"
+            initial={{ x: "100%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: "100%", opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="h-[47rem]  max-lg:h-screen pt-4 max-2xl:pl-4 max-2xl:pr-4 overflow-hidden"
+          >
+            <div className="flex justify-end">
+              <button
+                className={`  border p-2 rounded-lg hover:scale-95 transition-all duration-300 ${
+                  theme === "dark" ? "bg-gray-300 , text-black" : "bg-[#F4F4F5]"
+                }`}
+                onClick={() => setCheckInput("")}
+              >
+                <p className="text-sm  font-bold">{t("backToTerminal")}</p>
+              </button>
+            </div>
+            <Projects />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="terminal"
+            initial={{ x: 0, opacity: 1 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: "-100%", opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="h-[47rem] max-lg:h-screen pt-4 max-2xl:pl-4 max-2xl:pr-4 overflow-hidden"
+          >
             <ReactTerminal
               commands={commands}
               welcomeMessage={welcomeMessage}
@@ -128,9 +137,9 @@ export default function TerminalPage() {
               prompt=" C:\Users\Jarvis>"
               defaultHandler={handleDefaultCommand}
             />
-          )}
-        </div>
-      </Container>
-    </>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </Container>
   );
 }

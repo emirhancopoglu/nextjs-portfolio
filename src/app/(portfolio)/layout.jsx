@@ -5,6 +5,8 @@ import { Montserrat } from "next/font/google";
 import { ThemeSwitchProvider } from "@/context/theme-context";
 import "@/i18next";
 import "@/app/globals.css";
+import Header from "@/components/header/header";
+import Contact from "@/components/contact/contact";
 
 const MontserratFont = Montserrat({
   subsets: ["latin"],
@@ -16,9 +18,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${MontserratFont.variable} antialiased`}>
-        <ThemeProvider>
+        <ThemeProvider enableSystem={false}>
           <ThemeSwitchProvider>
-            <TerminalContextProvider> {children}</TerminalContextProvider>
+            <TerminalContextProvider>
+              <Header />
+              {children}
+              <Contact />
+            </TerminalContextProvider>
           </ThemeSwitchProvider>
         </ThemeProvider>
       </body>

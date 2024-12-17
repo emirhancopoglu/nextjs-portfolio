@@ -1,7 +1,6 @@
 import React from "react";
-import Header from "@/components/header/header";
+
 import TerminalPage from "@/components/terminal/terminal";
-import Contact from "@/components/contact/contact";
 
 export const metadata = {
   title: "Emirhan Çöpoğlu",
@@ -11,9 +10,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <Header />
       <TerminalPage />
-      <Contact />
     </>
   );
 }
