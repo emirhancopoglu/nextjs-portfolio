@@ -57,7 +57,7 @@ export default function Projects() {
               <a href="https://react.dev" target="_blank">
                 <FaReact
                   size={50}
-                  className={` rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 ${
+                  className={`rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 text-black ${
                     theme === "dark"
                       ? "bg-gray-300 , text-black"
                       : "bg-[#F4F4F5]"
@@ -68,7 +68,7 @@ export default function Projects() {
               <a href="https://tailwindcss.com" target="_blank">
                 <RiTailwindCssFill
                   size={50}
-                  className={` rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 ${
+                  className={`rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 text-black ${
                     theme === "dark"
                       ? "bg-gray-300 , text-black"
                       : "bg-[#F4F4F5]"
@@ -79,11 +79,15 @@ export default function Projects() {
             </div>
 
             <button
-              className={` border p-2 font-semibold rounded-full hover:bg-gray-200 transition-colors duration-300 ${
+              className={`border p-2 font-semibold rounded-full hover:bg-gray-200 transition-colors duration-300 ${
                 theme === "dark" ? "bg-gray-300 , text-black" : "bg-[#F4F4F5]"
               }`}
             >
-              <a href="https://github.com/Dev-Capella/viragas" target="_blank">
+              <a
+                className="text-black"
+                href="https://github.com/Dev-Capella/viragas"
+                target="_blank"
+              >
                 GitHub Repository
               </a>
             </button>
@@ -132,7 +136,7 @@ export default function Projects() {
               <a href="https://react.dev" target="_blank">
                 <FaReact
                   size={50}
-                  className={` rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 ${
+                  className={`rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 text-black ${
                     theme === "dark"
                       ? "bg-gray-300 , text-black"
                       : "bg-[#F4F4F5]"
@@ -143,7 +147,7 @@ export default function Projects() {
               <a href="https://tailwindcss.com" target="_blank">
                 <RiTailwindCssFill
                   size={50}
-                  className={` rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 ${
+                  className={`rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 text-black ${
                     theme === "dark"
                       ? "bg-gray-300 , text-black"
                       : "bg-[#F4F4F5]"
@@ -158,7 +162,11 @@ export default function Projects() {
                 theme === "dark" ? "bg-gray-300 , text-black" : "bg-[#F4F4F5]"
               }`}
             >
-              <a href="https://github.com/Dev-Capella/niksa" target="_blank">
+              <a
+                className="text-black"
+                href="https://github.com/Dev-Capella/niksa"
+                target="_blank"
+              >
                 GitHub Repository
               </a>
             </button>
