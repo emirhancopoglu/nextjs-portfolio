@@ -77,20 +77,19 @@ export default function Projects() {
                 />
               </a>
             </div>
-
-            <button
-              className={`border p-2 font-semibold rounded-full hover:bg-gray-200 transition-colors duration-300 ${
-                theme === "dark" ? "bg-gray-300 , text-black" : "bg-[#F4F4F5]"
-              }`}
+            <a
+              className="text-black"
+              href="https://github.com/Dev-Capella/viragas"
+              target="_blank"
             >
-              <a
-                className="text-black"
-                href="https://github.com/Dev-Capella/viragas"
-                target="_blank"
+              <button
+                className={`border p-2 font-semibold rounded-full hover:bg-gray-200 transition-colors duration-300 ${
+                  theme === "dark" ? "bg-gray-300 , text-black" : "bg-[#F4F4F5]"
+                }`}
               >
                 GitHub Repository
-              </a>
-            </button>
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -156,20 +155,19 @@ export default function Projects() {
                 />
               </a>
             </div>
-
-            <button
-              className={`border p-2 font-semibold rounded-full hover:bg-gray-200 transition-colors duration-300 ${
-                theme === "dark" ? "bg-gray-300 , text-black" : "bg-[#F4F4F5]"
-              }`}
+            <a
+              className="text-black"
+              href="https://github.com/Dev-Capella/niksa"
+              target="_blank"
             >
-              <a
-                className="text-black"
-                href="https://github.com/Dev-Capella/niksa"
-                target="_blank"
+              <button
+                className={`border p-2 font-semibold rounded-full hover:bg-gray-200 transition-colors duration-300 ${
+                  theme === "dark" ? "bg-gray-300 , text-black" : "bg-[#F4F4F5]"
+                }`}
               >
                 GitHub Repository
-              </a>
-            </button>
+              </button>
+            </a>
           </div>
         </div>
       </div>

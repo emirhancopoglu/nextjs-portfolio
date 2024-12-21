@@ -47,7 +47,7 @@ const resources = {
         "Frontend Developer pozisyonunda freelance olarak, profil demir ve çelikten masa, sandalye ayağı üreten firma için web sitesi geliştirdim.",
       NiksaMetalWhatIDid:
         "Sıfırdan modern, duyarlı (responsive) tasarım oluşturdum. Ürün fotoğraf galerisi için Ant Design kütüphanesini kullandım.",
-      WhatIDid: "Bu projedeki rolüm",
+      WhatIDid: "Bu Projedeki Rolüm",
     },
   },
 };
