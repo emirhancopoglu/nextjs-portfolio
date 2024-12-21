@@ -4,7 +4,8 @@ NextJS, Tailwind, next-themes, react-terminal, react-i18next, i18next, react-ico
   
 ## Ekran Görüntüleri
 ![portfolio-dark](https://github.com/user-attachments/assets/19d439e3-764a-4e60-b224-0380e6dcfcbb)
-![portfolio-projects](https://github.com/user-attachments/assets/b65f2ac8-6b2b-4f50-8023-cf910d4b2a85)
+![projectsdark](https://github.com/user-attachments/assets/1869d47f-dd42-48af-99d5-3f05c107049b)
+
 
 
 #
