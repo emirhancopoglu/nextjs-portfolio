@@ -48,7 +48,7 @@ export default function TerminalPage() {
         <br />
         <span className="text-[#7286D3] font-bold">{t("resume")}</span>
         <a
-          href="https://drive.google.com/file/d/1RQ1cLz8N03LX2n5uXMp3FbrmF1ySmZhB/view?usp=sharing"
+          href="https://drive.google.com/file/d/14fiYFFtbi6SzqwLe_tGdCVsRDUENfwdm/view?usp=sharing"
           target="_blank"
         >
           <FaFilePdf className="mt-4" size={70} />
