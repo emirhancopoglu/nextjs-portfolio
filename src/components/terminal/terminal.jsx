@@ -50,8 +50,9 @@ export default function TerminalPage() {
         <a
           href="https://drive.google.com/file/d/14fiYFFtbi6SzqwLe_tGdCVsRDUENfwdm/view?usp=sharing"
           target="_blank"
+          className="text-[#7286D3] font-bold"
         >
-          <a className="text-[#7286D3] font-bold">{t("resumeReview")}</a>
+          {t("resumeReview")}
         </a>
         <br />
       </>
