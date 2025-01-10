@@ -3,10 +3,10 @@ import { ThemeProvider } from "next-themes";
 import { TerminalContextProvider } from "react-terminal";
 import { Montserrat } from "next/font/google";
 import { ThemeSwitchProvider } from "@/context/theme-context";
-import "@/i18next";
-import "@/app/globals.css";
 import Header from "@/components/header/header";
 import Contact from "@/components/contact/contact";
+import "@/i18next";
+import "@/app/globals.css";
 
 const MontserratFont = Montserrat({
   subsets: ["latin"],
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${MontserratFont.variable} antialiased`}>
-        <ThemeProvider enableSystem={false}>
+        <ThemeProvider attribute="class" defaultTheme="system">
           <ThemeSwitchProvider>
             <TerminalContextProvider>
               <Header />

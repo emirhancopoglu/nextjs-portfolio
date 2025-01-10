@@ -5,11 +5,11 @@ import { IoMoonOutline } from "react-icons/io5";
 import { IoSunnyOutline } from "react-icons/io5";
 
 export default function ThemeSwitcherButtons() {
-  const { theme, setTheme } = useThemeContext();
+  const { resolvedTheme, theme, setTheme } = useThemeContext();
 
   return (
     <>
-      {theme === "light" ? (
+      {resolvedTheme === "light" ? (
         <button
           onClick={() => setTheme("dark")}
           className="transition-all duration-1000 "

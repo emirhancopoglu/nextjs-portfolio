@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { useThemeContext } from "@/context/theme-context";
 import Container from "@/components/utils/container";
 import Projects from "@/components/projects/projects";
-import { FaFilePdf } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function TerminalPage() {
