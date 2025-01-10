@@ -3,9 +3,9 @@ import { useState } from "react";
 import { ReactTerminal } from "react-terminal";
 import { useTranslation } from "react-i18next";
 import { useThemeContext } from "@/context/theme-context";
+import { motion, AnimatePresence } from "framer-motion";
 import Container from "@/components/utils/container";
 import Projects from "@/components/projects/projects";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function TerminalPage() {
   const { theme } = useThemeContext();
@@ -125,12 +125,12 @@ export default function TerminalPage() {
               welcomeMessage={welcomeMessage}
               themes={{
                 "custom-theme": {
-                  themeBGColor: `${theme === "light" ? "#F0F0F0" : "#2B2B30"}`,
+                  themeBGColor: `${theme === "dark" ? "#2B2B30" : "#F0F0F0"}`, // Terminal'in Ana Arkaplan Rengi
                   themeToolbarColor: `${
-                    theme === "light" ? "#F0F0F0" : "#2B2B30"
+                    theme === "dark" ? "#2B2B30" : "#F0F0F0" // Terminal'in Başlığı
                   }`,
-                  themeColor: `${theme === "light" ? "#4C4C6D" : "#B2B2B2"}`,
-                  themePromptColor: "#F05454",
+                  themeColor: `${theme === "dark" ? "#B2B2B2" : "#4C4C6D"}`, // Terminal yazıları
+                  themePromptColor: "#F05454", // Prompt yazısı
                 },
               }}
               theme="custom-theme"
