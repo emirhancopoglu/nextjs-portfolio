@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import { useThemeContext } from "@/context/theme-context";
 import { IoMoonOutline } from "react-icons/io5";
 import { IoSunnyOutline } from "react-icons/io5";
+import { useThemeContext } from "@/context/theme/theme-context";
 
 export default function ThemeSwitcherButtons() {
-  const { resolvedTheme, theme, setTheme } = useThemeContext();
+  const { resolvedTheme, setTheme } = useThemeContext();
 
   return (
     <>

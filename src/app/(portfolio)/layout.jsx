@@ -2,11 +2,12 @@
 import { ThemeProvider } from "next-themes";
 import { TerminalContextProvider } from "react-terminal";
 import { Montserrat } from "next/font/google";
-import { ThemeSwitchProvider } from "@/context/theme-context";
+
 import Header from "@/components/header/header";
 import Contact from "@/components/contact/contact";
 import "@/i18next";
 import "@/app/globals.css";
+import { ThemeSwitchProvider } from "@/context/theme/theme-context";
 
 const MontserratFont = Montserrat({
   subsets: ["latin"],

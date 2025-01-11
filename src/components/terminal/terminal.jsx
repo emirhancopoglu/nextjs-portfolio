@@ -2,10 +2,10 @@
 import { useState } from "react";
 import { ReactTerminal } from "react-terminal";
 import { useTranslation } from "react-i18next";
-import { useThemeContext } from "@/context/theme-context";
 import { motion, AnimatePresence } from "framer-motion";
 import Container from "@/components/utils/container";
 import Projects from "@/components/projects/projects";
+import { useThemeContext } from "@/context/theme/theme-context";
 
 export default function TerminalPage() {
   const { theme } = useThemeContext();
@@ -97,7 +97,7 @@ export default function TerminalPage() {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "100%", opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="h-[47rem] max-lg:h-full  pt-4 max-2xl:pl-4 max-2xl:pr-4 overflow-hidden"
+            className="h-auto max-lg:h-full  pt-4 max-2xl:pl-4 max-2xl:pr-4 overflow-hidden"
           >
             <div className="flex justify-end">
               <button
@@ -106,7 +106,7 @@ export default function TerminalPage() {
                 }`}
                 onClick={() => setCheckInput("")}
               >
-                <p className="text-sm  font-bold">{t("backToTerminal")}</p>
+                <p className="text-sm font-bold">{t("backToTerminal")}</p>
               </button>
             </div>
             <Projects />

@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import { useThemeContext } from "@/context/theme-context";
 import Container from "@/components/utils/container";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
+import { useThemeContext } from "@/context/theme/theme-context";
 
 export default function Contact() {
   const { theme } = useThemeContext();

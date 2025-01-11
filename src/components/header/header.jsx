@@ -3,7 +3,7 @@ import React from "react";
 import Container from "@/components/utils/container";
 import ThemeSwitcherButtons from "@/components/theme-switcher/theme-switcher";
 import LanguageSwitcher from "@/components/lang-switcher/lang-switcher";
-import { useThemeContext } from "@/context/theme-context";
+import { useThemeContext } from "@/context/theme/theme-context";
 
 export default function Header() {
   const { theme } = useThemeContext();
