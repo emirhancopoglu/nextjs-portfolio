@@ -12,7 +12,7 @@ export default function ProjectNiksa() {
   const { t } = useTranslation();
   return (
     <>
-      <div className="flex flex-row-reverse gap-4 max-xl:gap-4 mt-32 max-sm:justify-center max-sm:flex-col max-sm:mt-12">
+      <div className="flex flex-row-reverse gap-4 max-xl:gap-4 items-center mt-32 max-sm:justify-center max-sm:flex-col max-sm:mt-12">
         <div
           className={`flex flex-col justify-center items-center hover:scale-90 transition-all duration-500 w-[40%] h-60 shadow-xl rounded-md max-sm:h-44 max-md:w-full max-sm:p-4 max-lg:w-[48%] max-xl:w-[23%] p-4 border ${
             theme === "dark" ? "border-gray-500" : "border-gray-200"
