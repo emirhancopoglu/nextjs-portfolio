@@ -29,6 +29,9 @@ const resources = {
         "A web application that allows you to easily manage your personal budget. In this project with a minimalist design, you can personalize your categories, record your income and expenses and manage your budget.",
       WalletWhatIDid:
         " In the project I developed from scratch, I aimed for a minimalist and responsive design. I used the Material UI library with fixed design principles. I enabled users to save their income and expense information to localStorage. I presented income and expense data dynamically with ChartJS. I also added Light and Dark mode support.",
+      notFoundMessage:
+        "is not recognized as an internal or external command, to go home",
+      notFoundClick: "click here",
     },
   },
   tr: {
@@ -58,6 +61,8 @@ const resources = {
         "Kişisel bütçenizi kolayca yönetmenize olanak sağlayan bir web uygulaması. Minimalist tasarıma sahip bu projede, kategorilerinizi kişiselleştirerek gelir ve giderlerinizi kaydedip bütçenizi yönetebilirsiniz.",
       WalletWhatIDid:
         "Sıfırdan geliştirdiğim projede, minimalist ve responsive bir tasarım hedefledim. Sabit tasarım prensipleriyle Material UI kütüphanesini kullandım. Kullanıcıların gelir-gider bilgilerini localStorage'a kaydetmelerini sağladım. ChartJS ile dinamik olarak gelir-gider verilerini görsel şekilde sundum. Ayrıca, Light ve Dark mode desteği ekledim.",
+      notFoundMessage: "adlı dosya yolu bulunamadı. Ana dosyaya dönmek için",
+      notFoundClick: "tıklayın",
     },
   },
 };

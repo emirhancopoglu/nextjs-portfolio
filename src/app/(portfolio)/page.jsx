@@ -1,5 +1,4 @@
 import React from "react";
-
 import TerminalPage from "@/components/terminal/terminal";
 
 export const metadata = {
