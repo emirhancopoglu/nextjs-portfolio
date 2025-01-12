@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
 import { useThemeContext } from "@/context/theme/theme-context";
 import Container from "@/components/utils/container";
+import Link from "next/link";
 
 export default function NotFoundTerminalPage() {
   const { theme } = useThemeContext();
@@ -17,7 +18,7 @@ export default function NotFoundTerminalPage() {
       <br /> <br />
       <span className="text-[#7286D3] font-bold">
         {trimmedPath} {t("notFoundMessage")}
-        <a href="/"> {t("notFoundClick")}.</a>
+        <Link href="/"> {t("notFoundClick")}.</Link>
         <br />
       </span>
       <br />
