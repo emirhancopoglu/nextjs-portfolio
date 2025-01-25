@@ -4,10 +4,10 @@ import { useTranslation } from "react-i18next";
 import { useThemeContext } from "@/context/theme/theme-context";
 import { FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
-import NiksaMetalBlack from "@/assets/niksametal420.png";
-import NiksaMetalWhite from "@/assets/niksawhite420.png";
+import TufisPetHouse from "@/assets/tufispethouse.png";
+import TufisPetHouseWhite from "@/assets/tufispethousewhite.png";
 
-export default function ProjectNiksa() {
+export default function ProjectTufi() {
   const { theme } = useThemeContext();
   const { t } = useTranslation();
   return (
@@ -20,24 +20,26 @@ export default function ProjectNiksa() {
         >
           <a
             className="w-full h-full"
-            href="https://niksametal.com"
+            href="https://tufispethouse.com/"
             target="_blank"
           >
             <Image
               className="w-full h-full cursor-pointer object-contain pointer-events-none"
               alt="Vira Gas"
-              src={theme === "dark" ? NiksaMetalWhite : NiksaMetalBlack}
+              src={theme === "dark" ? TufisPetHouseWhite : TufisPetHouse}
             ></Image>
           </a>
         </div>
         <div className="flex flex-col justify-center w-[60%] max-xl:w-full">
-          <p className="font-extrabold pb-2 max-sm:text-center">Niksa Metal</p>
+          <p className="font-extrabold pb-2 max-sm:text-center">
+            Tufi's Pet House
+          </p>
           <p
             className={`text-justify  ${
               theme === "dark" ? "text-gray-300" : "text-gray-600"
             }`}
           >
-            {t("NiksaMetalDescription")}
+            {t("TufiDescription")}
           </p>
           <p className="font-extrabold py-2 max-sm:text-center">
             {t("WhatIDid")}
@@ -47,7 +49,7 @@ export default function ProjectNiksa() {
               theme === "dark" ? "text-gray-300" : "text-gray-600"
             }`}
           >
-            {t("NiksaMetalWhatIDid")}
+            {t("TufiWhatIDid")}
           </p>
           <div className="flex flex-row justify-between pt-4 items-center">
             <div className="flex flex-row gap-2">
@@ -56,7 +58,7 @@ export default function ProjectNiksa() {
                   size={50}
                   className={`rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 text-black ${
                     theme === "dark" ? "text-white hover:bg-[#121212]" : ""
-                  } `}
+                  }`}
                   alt="ReactJS"
                 />
               </a>
@@ -72,7 +74,7 @@ export default function ProjectNiksa() {
             </div>
             <a
               className="text-black"
-              href="https://github.com/Dev-Capella/niksa"
+              href="https://github.com/Dev-Capella/petweb"
               target="_blank"
             >
               <button

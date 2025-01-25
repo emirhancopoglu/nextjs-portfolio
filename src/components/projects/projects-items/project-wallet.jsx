@@ -50,15 +50,13 @@ export default function ProjectWallet() {
           >
             {t("WalletWhatIDid")}
           </p>
-          <div className="flex flex-row justify-between pt-4">
+          <div className="flex flex-row justify-between pt-4 items-center">
             <div className="flex flex-row gap-2">
               <a href="https://nextjs.org/" target="_blank">
                 <RiNextjsFill
                   size={50}
-                  className={`rounded-full  hover:bg-gray-200 transition-colors duration-300 text-black ${
-                    theme === "dark"
-                      ? "bg-gray-300 , text-black"
-                      : "bg-[#F4F4F5]"
+                  className={`rounded-full  hover:bg-gray-200 transition-colors duration-300 text-black  ${
+                    theme === "dark" ? "text-white hover:bg-[#121212]" : ""
                   }`}
                   alt="NextJS"
                 />
@@ -67,20 +65,16 @@ export default function ProjectWallet() {
                 <SiMui
                   size={50}
                   className={`rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 text-black ${
-                    theme === "dark"
-                      ? "bg-gray-300 , text-black"
-                      : "bg-[#F4F4F5]"
-                  }`}
+                    theme === "dark" ? "text-white hover:bg-[#121212]" : ""
+                  } `}
                   alt="MaterialUI"
                 />
               </a>
               <a href="https://tailwindcss.com" target="_blank">
                 <RiTailwindCssFill
                   size={50}
-                  className={`rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 text-black ${
-                    theme === "dark"
-                      ? "bg-gray-300 , text-black"
-                      : "bg-[#F4F4F5]"
+                  className={`rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 text-black  ${
+                    theme === "dark" ? "text-white hover:bg-[#121212]" : ""
                   }`}
                   alt="Tailwind"
                 />

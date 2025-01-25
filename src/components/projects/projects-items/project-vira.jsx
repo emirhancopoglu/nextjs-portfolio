@@ -50,15 +50,13 @@ export default function ProjectVira() {
           >
             {t("ViraGasWhatIDid")}
           </p>
-          <div className="flex flex-row justify-between pt-4">
+          <div className="flex flex-row justify-between pt-4 items-center">
             <div className="flex flex-row gap-2">
               <a href="https://react.dev" target="_blank">
                 <FaReact
                   size={50}
-                  className={`rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 text-black ${
-                    theme === "dark"
-                      ? "bg-gray-300 , text-black"
-                      : "bg-[#F4F4F5]"
+                  className={`rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 text-black  ${
+                    theme === "dark" ? "text-white hover:bg-[#121212]" : ""
                   }`}
                   alt="ReactJS"
                 />
@@ -67,10 +65,8 @@ export default function ProjectVira() {
                 <RiTailwindCssFill
                   size={50}
                   className={`rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 text-black ${
-                    theme === "dark"
-                      ? "bg-gray-300 , text-black"
-                      : "bg-[#F4F4F5]"
-                  }`}
+                    theme === "dark" ? "text-white hover:bg-[#121212]" : ""
+                  } `}
                   alt="Tailwind"
                 />
               </a>
