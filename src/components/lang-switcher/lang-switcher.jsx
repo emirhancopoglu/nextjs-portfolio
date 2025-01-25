@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 const LanguageSwitcher = () => {
@@ -11,7 +12,7 @@ const LanguageSwitcher = () => {
   return (
     <>
       {i18n.language === "en" ? (
-        <img
+        <Image
           alt="United States"
           src="http://purecatamphetamine.github.io/country-flag-icons/3x2/TR.svg"
           onClick={() => changeLanguage("tr")}
@@ -20,7 +21,7 @@ const LanguageSwitcher = () => {
           height={27}
         />
       ) : (
-        <img
+        <Image
           alt="United States"
           src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
           onClick={() => changeLanguage("en")}
