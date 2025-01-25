@@ -22,8 +22,8 @@ const LanguageSwitcher = () => {
         />
       ) : (
         <Image
-          alt="United States"
-          src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
+          alt="United Kingdom"
+          src="http://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg"
           onClick={() => changeLanguage("en")}
           className="object-contain"
           width={27}
