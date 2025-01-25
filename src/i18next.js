@@ -30,7 +30,7 @@ const resources = {
       WalletWhatIDid:
         " In the project I developed from scratch, I aimed for a minimalist and responsive design. I used the Material UI library with fixed design principles. I enabled users to save their income and expense information to localStorage. I presented income and expense data dynamically with ChartJS. I also added Light and Dark mode support.",
       TufiDescription:
-        "I developed a modern and user-oriented website as a freelance Frontend Developer for Tufi Pet House, a business offering veterinary and dog boarding services.",
+        "I developed a modern and user-oriented website as a freelance Frontend Developer for Tufis Pet House, a business offering veterinary and dog boarding services.",
       TufiWhatIDid:
         "In this project, which was developed from scratch, I aimed for a modern design. I created a responsive and user-friendly interface that is compatible with all devices (mobile, tablet, desktop) according to responsive design principles. I designed dynamic and interactive elements to capture users' attention. By integrating the React i18n library, I provided multilingual support, allowing users to view the website in different languages.",
       notFoundMessage:

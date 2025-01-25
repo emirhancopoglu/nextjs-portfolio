@@ -32,7 +32,7 @@ export default function ProjectTufi() {
         </div>
         <div className="flex flex-col justify-center w-[60%] max-xl:w-full">
           <p className="font-extrabold pb-2 max-sm:text-center">
-            Tufi's Pet House
+            Tufi&apos;s Pet House
           </p>
           <p
             className={`text-justify  ${
