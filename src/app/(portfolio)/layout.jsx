@@ -16,9 +16,9 @@ const MontserratFont = Montserrat({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={`${MontserratFont.variable} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system">
+        <ThemeProvider attribute="class" defaultTheme="light">
           <ThemeSwitchProvider>
             <TerminalContextProvider>
               <Header />

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ReactTerminal } from "react-terminal";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,8 +8,9 @@ import Projects from "@/components/projects/projects";
 import { useThemeContext } from "@/context/theme/theme-context";
 
 export default function TerminalPage() {
-  const { theme } = useThemeContext();
+  const { theme, resolvedTheme } = useThemeContext();
   const [checkInput, setCheckInput] = useState("");
+  const [isThemeLoaded, setIsThemeLoaded] = useState(false);
   const { t } = useTranslation();
 
   const commands = {
@@ -87,6 +88,51 @@ export default function TerminalPage() {
     }
   };
 
+  useEffect(() => {
+    if (theme) {
+      setIsThemeLoaded(true);
+    }
+  }, [theme]);
+
+  if (!isThemeLoaded) {
+    // Tema yüklenmeden önce bir yükleme göstergesi gösterebilirsiniz
+    return (
+      <>
+        <Container>
+          <div className="h-[47rem] max-lg:h-screen pt-4 max-2xl:pl-4 max-2xl:pr-4 overflow-hidden">
+            <ReactTerminal
+              commands={commands}
+              welcomeMessage={welcomeMessage}
+              errorMessage={t("notFoundCommand")}
+              prompt=" C:\Users\Jarvis>"
+              themes={{
+                "custom-theme": {
+                  themeBGColor: `${theme === "dark" ? "#2B2B30" : "#F0F0F0"}`, // Terminal'in Ana Arkaplan Rengi
+                  themeToolbarColor: `${
+                    theme === "dark" ? "#2B2B30" : "#F0F0F0" // Terminal'in Başlığı
+                  }`,
+                  themeColor: `${theme === "dark" ? "#B2B2B2" : "#4C4C6D"}`, // Terminal yazıları
+                  themePromptColor: "#F05454", // Prompt yazısı
+                },
+              }}
+              theme="custom-theme"
+              defaultHandler={handleDefaultCommand}
+            />
+          </div>
+        </Container>
+      </>
+    );
+  }
+
+  const terminalTheme = {
+    "custom-theme": {
+      themeBGColor: resolvedTheme === "dark" ? "#2B2B30" : "#F0F0F0",
+      themeToolbarColor: resolvedTheme === "dark" ? "#2B2B30" : "#F0F0F0",
+      themeColor: resolvedTheme === "dark" ? "#B2B2B2" : "#4C4C6D",
+      themePromptColor: "#F05454",
+    },
+  };
+
   return (
     <Container>
       <AnimatePresence mode="wait">
@@ -101,9 +147,7 @@ export default function TerminalPage() {
           >
             <div className="flex justify-end">
               <button
-                className={`border p-2 rounded-lg hover:scale-95 transition-all duration-300 text-black ${
-                  theme === "dark" ? "bg-gray-300 , text-black" : "bg-[#F4F4F5]"
-                }`}
+                className={`border p-2 rounded-lg hover:scale-95 transition-all duration-300 text-black dark:bg-gray-300 dark:text-black bg-[#F4F4F5] `}
                 onClick={() => setCheckInput("")}
               >
                 <p className="text-sm font-bold">{t("backToTerminal")}</p>
@@ -123,16 +167,7 @@ export default function TerminalPage() {
             <ReactTerminal
               commands={commands}
               welcomeMessage={welcomeMessage}
-              themes={{
-                "custom-theme": {
-                  themeBGColor: `${theme === "dark" ? "#2B2B30" : "#F0F0F0"}`, // Terminal'in Ana Arkaplan Rengi
-                  themeToolbarColor: `${
-                    theme === "dark" ? "#2B2B30" : "#F0F0F0" // Terminal'in Başlığı
-                  }`,
-                  themeColor: `${theme === "dark" ? "#B2B2B2" : "#4C4C6D"}`, // Terminal yazıları
-                  themePromptColor: "#F05454", // Prompt yazısı
-                },
-              }}
+              themes={terminalTheme}
               theme="custom-theme"
               errorMessage={t("notFoundCommand")}
               prompt=" C:\Users\Jarvis>"

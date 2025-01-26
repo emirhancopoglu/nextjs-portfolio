@@ -6,15 +6,7 @@ const ThemeContext = createContext();
 
 export const ThemeSwitchProvider = ({ children }) => {
   const { resolvedTheme, theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
   return (
     <ThemeContext.Provider value={{ theme, setTheme, resolvedTheme }}>
       {children}
