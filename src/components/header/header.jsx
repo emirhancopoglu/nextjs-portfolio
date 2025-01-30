@@ -12,9 +12,7 @@ export default function Header() {
         >
           <div className="flex flex-col">
             <h1 className="font-bold text-2xl">Emirhan Çöpoğlu</h1>
-            <h1 className="font-bold text-sm text-gray-500">
-              Frontend Developer
-            </h1>
+            <h1 className="font-bold text-sm">Frontend Developer</h1>
           </div>
           <div className="flex flex-row items-center justify-center gap-4">
             <LanguageSwitcher />

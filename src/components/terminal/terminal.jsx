@@ -48,7 +48,7 @@ export default function TerminalPage() {
         <br />
         <span className="text-[#7286D3] font-bold">{t("resume")}</span>
         <a
-          href="https://drive.google.com/file/d/14fiYFFtbi6SzqwLe_tGdCVsRDUENfwdm/view?usp=sharing"
+          href="https://drive.google.com/file/d/1SrFLH4j94ztTaU8QbaNFj76ClyoiRvKS/view?usp=sharing"
           target="_blank"
           className="text-[#7286D3] font-bold"
         >
