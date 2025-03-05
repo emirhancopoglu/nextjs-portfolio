@@ -1,13 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import { useThemeContext } from "@/context/theme/theme-context";
 import { useTranslation } from "react-i18next";
-import { RiNextjsFill } from "react-icons/ri";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiMui } from "react-icons/si";
-import WalletManagement from "@/assets/walletmanagement.png";
+import { FaReact } from "react-icons/fa";
+import { useThemeContext } from "@/context/theme/theme-context";
+import DerinWayHomeLogo from "@/assets/derinwayhome.png";
 
-export default function ProjectWallet() {
+export default function ProjectDerin() {
   const { theme } = useThemeContext();
   const { t } = useTranslation();
   return (
@@ -18,43 +17,36 @@ export default function ProjectWallet() {
         >
           <a
             className="w-full h-full"
-            href="https://walletmanagement.vercel.app"
+            href="https://derinwayhomes.com/"
             target="_blank"
           >
             <Image
               className="w-full h-full cursor-pointer object-contain pointer-events-none"
-              alt="WalletManagement"
-              src={WalletManagement}
+              alt="DerinWayHomeLogo"
+              src={DerinWayHomeLogo}
             ></Image>
           </a>
         </div>
         <div className="flex flex-col justify-center w-[60%] max-xl:w-full">
           <p className="font-extrabold pb-2 max-sm:text-center">
-            Wallet Management
+            Derin Way Home
           </p>
           <p className={`text-justify text-gray-600 dark:text-gray-300`}>
-            {t("WalletDescription")}
+            {t("DerinDescription")}
           </p>
           <p className="font-extrabold py-2 max-sm:text-center">
             {t("WhatIDid")}
           </p>
           <p className={`text-justify text-gray-600 dark:text-gray-300`}>
-            {t("WalletWhatIDid")}
+            {t("DerinWhatIDid")}
           </p>
           <div className="flex flex-row justify-between pt-4 items-center">
             <div className="flex flex-row gap-2">
-              <a href="https://nextjs.org/" target="_blank">
-                <RiNextjsFill
+              <a href="https://react.dev" target="_blank">
+                <FaReact
                   size={50}
                   className={`rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 text-black dark:text-white dark:hover:bg-gray-800`}
-                  alt="NextJS"
-                />
-              </a>
-              <a href="https://mui.com/material-ui/" target="_blank">
-                <SiMui
-                  size={50}
-                  className={`rounded-full p-2 hover:bg-gray-200 transition-colors duration-300 text-black dark:text-white dark:hover:bg-gray-800`}
-                  alt="MaterialUI"
+                  alt="ReactJS"
                 />
               </a>
               <a href="https://tailwindcss.com" target="_blank">
@@ -67,7 +59,7 @@ export default function ProjectWallet() {
             </div>
             <a
               className="text-black"
-              href="https://github.com/emirhancopoglu/walletManagement"
+              href="https://github.com/Dev-Capella/derinwayhome"
               target="_blank"
             >
               <button

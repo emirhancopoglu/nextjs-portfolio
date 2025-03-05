@@ -33,6 +33,10 @@ const resources = {
         "I developed a modern and user-oriented website as a freelance Frontend Developer for Tufis Pet House, a business offering veterinary and dog boarding services.",
       TufiWhatIDid:
         "In this project, which was developed from scratch, I aimed for a modern design. I created a responsive and user-friendly interface that is compatible with all devices (mobile, tablet, desktop) according to responsive design principles. I designed dynamic and interactive elements to capture users' attention. By integrating the React i18n library, I provided multilingual support, allowing users to view the website in different languages.",
+      DerinDescription:
+        "As a freelance Frontend Developer, I developed a website for a business that offers tiny house service in nature and forest.",
+      DerinWhatIDid:
+        "I designed the Homepage and Contact pages in accordance with the requested design. I developed responsive design on all devices (mobile, tablet, desktop). I provided multilingual support by integrating the React i18n library.",
       notFoundMessage:
         "is not recognized as an internal or external command, to go home",
       notFoundClick: "click here",
@@ -69,6 +73,11 @@ const resources = {
         "Frontend Developer pozisyonunda freelance olarak, veteriner hizmetleri ve köpek pansiyonu hizmeti sunan bir işletme için web sitesi geliştirdim.",
       TufiWhatIDid:
         "Sıfırdan geliştirilen bu projede, modern bir tasarım hedefledim. Responsive tasarım ilkelerine uygun olarak tüm cihazlarda (mobil, tablet, masaüstü) uyumlu ve kullanıcı dostu arayüz geliştirdim. Kullanıcıların dikkatini çekecek dinamik ve interaktif öğeler tasarladım. React i18n kütüphanesini entegre ederek çok dilli destek sağladım , bu sayede kullanıcılar web sitesini farklı dillerde görüntüleyebilme imkanına sahip oldu.",
+
+      DerinDescription:
+        "Frontend Developer pozisyonunda freelance olarak, doğa ve ormanın içinde tiny house hizmeti sunan bir işletme için web sitesi geliştirdim.",
+      DerinWhatIDid:
+        "İstenilen tasarıma uygun olarak Anasayfa ve İletişim sayfalarının tasarımlarını yaptım. Tüm cihazlarda (mobil, tablet, masaüstü) responsive tasarım geliştirdim. React i18n kütüphanesini entegre ederek çok dilli destek sağladım.",
       notFoundMessage: "adlı dosya yolu bulunamadı. Ana dosyaya dönmek için",
       notFoundClick: "tıklayın",
     },
