@@ -3,6 +3,7 @@ import NiksaMetal from "@/assets/niksametalnew.png";
 import WalletManagement from "@/assets/walletmanagementnew.png";
 import TufisPetHouse from "@/assets/tufispethousenew.png";
 import DerinWayHomeLogo from "@/assets/derinwayhomenew.png";
+import PideVakti from "@/assets/pidetime.png";
 
 export const projectItems = [
   {
@@ -49,5 +50,14 @@ export const projectItems = [
     projectGithub: "https://github.com/Dev-Capella/derinwayhome",
     projectLink: "https://derinwayhomes.com/",
     usedTechnology: "ReactJS, Tailwind CSS, Framer Motion",
+  },
+  {
+    reversed: true,
+    image: PideVakti,
+    projectName: "Pide Vakti",
+    projectKey: "Pide",
+    projectGithub: "https://github.com/emirhancopoglu/pide-time",
+    projectLink: "https://pidetime.vercel.app/ara",
+    usedTechnology: "NextJS, Tailwind CSS, Shadcn UI, Next-Themes",
   },
 ];

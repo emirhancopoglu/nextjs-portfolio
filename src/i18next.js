@@ -37,6 +37,11 @@ const resources = {
         "As a freelance Frontend Developer, I developed a website for a business that offers tiny house service in nature and forest.",
       DerinWhatIDid:
         "I designed the Homepage and Contact pages in accordance with the requested design. I developed responsive design on all devices (mobile, tablet, desktop). I provided multilingual support by integrating the React i18n library.",
+
+      PideDescription:
+        "Made for the month of Ramadan, it dynamically pulls sahur and iftar times over the city or city, district via API and presents them to the user.",
+      PideWhatIDid:
+        "In this project developed with NextJS, I used Shadcn UI with fixed design principles. Users can see iftar and sahur times by selecting the city or city, district. As an API, a request is sent to vakit.vercel.app and the times are dynamically pulled. Light and Dark theme support is available.",
       notFoundMessage:
         "is not recognized as an internal or external command, to go home",
       notFoundClick: "click here",
@@ -78,6 +83,10 @@ const resources = {
         "Frontend Developer pozisyonunda freelance olarak, doğa ve ormanın içinde tiny house hizmeti sunan bir işletme için web sitesi geliştirdim.",
       DerinWhatIDid:
         "İstenilen tasarıma uygun olarak Anasayfa ve İletişim sayfalarının tasarımlarını yaptım. Tüm cihazlarda (mobil, tablet, masaüstü) responsive tasarım geliştirdim. React i18n kütüphanesini entegre ederek çok dilli destek sağladım.",
+      PideDescription:
+        "Ramazan ayı için yapılmış, şehir veya şehir, ilçe üzerinden sahur ve iftar vakitlerini API üzerinden dinamik olarak çekerek kullanıcıya sunar.",
+      PideWhatIDid:
+        "NextJS ile geliştirilen bu projede, sabit tasarım prensipleriyle Shadcn UI kullandım. Kullanıcılar şehir veya şehir, ilçe seçerek iftar ve sahur zamanlarını görebilme imkanı sağlanıyor. API olarak vakit.vercel.app tarafına istek atılıyor ve dinamik olarak zamanlar çekiliyor. Light ve Dark theme desteği bulunmaktadır.",
       notFoundMessage: "adlı dosya yolu bulunamadı. Ana dosyaya dönmek için",
       notFoundClick: "tıklayın",
     },
