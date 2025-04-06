@@ -4,6 +4,7 @@ import WalletManagement from "@/assets/walletmanagementnew.png";
 import TufisPetHouse from "@/assets/tufispethousenew.png";
 import DerinWayHomeLogo from "@/assets/derinwayhomenew.png";
 import PideVakti from "@/assets/pidetime.png";
+import PositivusLogo from "@/assets/positivus.png";
 
 export const projectItems = [
   {
@@ -59,5 +60,14 @@ export const projectItems = [
     projectGithub: "https://github.com/emirhancopoglu/pide-time",
     projectLink: "https://pidetime.vercel.app/ara",
     usedTechnology: "NextJS, Tailwind CSS, Shadcn UI, Next-Themes",
+  },
+  {
+    reversed: false,
+    image: PositivusLogo,
+    projectName: "Positivus Landing Page",
+    projectKey: "Positivus",
+    projectGithub: "https://github.com/emirhancopoglu/positivus-landing",
+    projectLink: "https://positivuslabs.vercel.app/",
+    usedTechnology: "ReactJS, Tailwind CSS, react-fast-marquee, framer-motion",
   },
 ];

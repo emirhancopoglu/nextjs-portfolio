@@ -23,7 +23,7 @@ export default function Projects() {
               <Image
                 src={project.image}
                 alt="Alt"
-                className={`w-full min-h-[400px] object-cover ${
+                className={`w-full min-h-[400px] object-cover border dark:border-gray-400 ${
                   project.reversed
                     ? "rounded-bl-none rounded-tr-none rounded-tl-2xl rounded-br-2xl"
                     : "rounded-tl-none rounded-tr-2xl rounded-bl-2xl rounded-br-none"

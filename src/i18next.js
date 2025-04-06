@@ -42,6 +42,11 @@ const resources = {
         "Made for the month of Ramadan, it dynamically pulls sahur and iftar times over the city or city, district via API and presents them to the user.",
       PideWhatIDid:
         "In this project developed with NextJS, I used Shadcn UI with fixed design principles. Users can see iftar and sahur times by selecting the city or city, district. As an API, a request is sent to vakit.vercel.app and the times are dynamically pulled. Light and Dark theme support is available.",
+      PositivusDescription:
+        "Positivus is a modern digital marketing agency website based on a Figma design and coded using ReactJS and Tailwind CSS. ",
+      PositivusWhatIDid:
+        "Developed with ReactJS, this web application was coded with clean code structure, pixel perfect coding and responsive design principles in mind. Although it sticks to the Figma design, some design elements and skins have been changed to adapt. The skeleton structure was designed using justify-between layout instead of justify-around.",
+
       notFoundMessage:
         "is not recognized as an internal or external command, to go home",
       notFoundClick: "click here",
@@ -87,6 +92,10 @@ const resources = {
         "Ramazan ayı için yapılmış, şehir veya şehir, ilçe üzerinden sahur ve iftar vakitlerini API üzerinden dinamik olarak çekerek kullanıcıya sunar.",
       PideWhatIDid:
         "NextJS ile geliştirilen bu projede, sabit tasarım prensipleriyle Shadcn UI kullandım. Kullanıcılar şehir veya şehir, ilçe seçerek iftar ve sahur zamanlarını görebilme imkanı sağlanıyor. API olarak vakit.vercel.app tarafına istek atılıyor ve dinamik olarak zamanlar çekiliyor. Light ve Dark theme desteği bulunmaktadır.",
+      PositivusDescription:
+        "Positivus, bir Figma tasarımından yola çıkılarak ReactJS ve Tailwind CSS kullanılarak kodlanmış modern bir dijital pazarlama ajansı sitesidir. ",
+      PositivusWhatIDid:
+        "ReactJS ile geliştirilen bu web uygulaması, temiz kod yapısı, pixel perfect coding ve responsive tasarım prensipleri göz önünde bulundurularak kodlandı. Figma tasarımına bağlı kalmakla birlikte, bazı tasarım unsurları ve görünümler, uyum sağlamak adına değiştirilmiştir. İskelet yapı olarak justify-around yerine justify-between düzeni kullanılarak tasarım yapılmıştır.",
       notFoundMessage: "adlı dosya yolu bulunamadı. Ana dosyaya dönmek için",
       notFoundClick: "tıklayın",
     },
