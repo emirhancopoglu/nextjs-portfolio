@@ -148,8 +148,8 @@ export default function ProjectView({ slug }) {
   return (
     <div className="flex flex-col lg:min-h-[calc(100dvh-154px)]">
       <div className={`${pagePad} flex-1`}>
-        <div className="grid gap-x-8 gap-y-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,530px)]">
-          <Code>
+        <div className="grid grid-cols-[minmax(0,1fr)] gap-x-8 gap-y-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,530px)]">
+          <Code className="min-w-0">
             <Line n={1}>
               <Kw>export const</Kw> <Ident>project</Ident> = {"{"}
             </Line>
@@ -161,7 +161,7 @@ export default function ProjectView({ slug }) {
             <Line n={fields.length + 2}>{"};"}</Line>
           </Code>
 
-          <div>
+          <div className="min-w-0">
             <BrowserPreview project={project} />
             <div className="mt-3.5 flex flex-wrap gap-2.5">
               {project.live && (
