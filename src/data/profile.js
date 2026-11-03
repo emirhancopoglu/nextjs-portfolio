@@ -3,9 +3,8 @@ export const profile = {
   email: "copogluemirhan@outlook.com",
   linkedin: "https://www.linkedin.com/in/emirhancopoglu/",
   github: "https://github.com/emirhancopoglu",
-  // Direct download (Drive serves it as an attachment instead of the viewer).
-  resume:
-    "https://drive.google.com/uc?export=download&id=1SrFLH4j94ztTaU8QbaNFj76ClyoiRvKS",
+  // Served from /public; links use the `download` attribute.
+  resume: "/Emirhan-Copoglu-Resume.pdf",
 };
 
 // Shown on the stack.json page.

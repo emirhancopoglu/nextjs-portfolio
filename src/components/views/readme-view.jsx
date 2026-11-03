@@ -55,8 +55,8 @@ export default function ReadmeView() {
               open ./projects
             </Button>
             <Button href={profile.resume} download variant="ghost" className="!h-[50px] !text-[15px] sm:px-7">
-              resume.pdf
-              <Arrow dir="down" className="h-4 w-4" />
+              {t("resume_file")}
+              <Arrow dir="down-to-line" className="h-4 w-4" />
             </Button>
           </div>
 

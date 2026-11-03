@@ -97,8 +97,23 @@ body {
   animation: caret-blink 1.1s steps(1) infinite;
 }
 
+/* Page transition (applied to the editor content on client-side navigation) */
+@keyframes page-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-fade {
+  animation: page-fade 0.2s ease-out both;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .caret-blink {
+  .caret-blink,
+  .page-fade {
     animation: none;
   }
 }

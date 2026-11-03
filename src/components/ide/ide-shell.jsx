@@ -118,15 +118,16 @@ export default function IdeShell({ children }) {
           </div>
 
           <div ref={scrollRef} className="ide-scroll min-h-0 flex-1 overflow-y-auto">
-            <motion.div
-              key={pathname}
-              // No entrance animation on the first (server-rendered) paint.
-              initial={hasNavigated.current ? { opacity: 0, y: 6 } : false}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.22, ease: "easeOut" }}
-            >
+            {/*
+              Page fade is a plain CSS animation (see .page-fade in globals.css):
+              - opacity only, so nothing overflows and no scrollbar flashes;
+              - no JS "commit final value" step, so no 1-frame flicker at the end
+                (framer-motion's opacity animation blinked to 0 when finishing).
+              Skipped on the first, server-rendered paint.
+            */}
+            <div key={pathname} className={hasNavigated.current ? "page-fade" : undefined}>
               {children}
-            </motion.div>
+            </div>
           </div>
         </main>
       </div>

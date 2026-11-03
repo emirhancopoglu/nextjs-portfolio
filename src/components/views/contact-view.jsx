@@ -22,13 +22,13 @@ export default function ContactView() {
           ,
         </Line>
         <Line n={3} indent={1}>
-          linkedin: <LinkStr href={profile.linkedin} arrow>in/emirhancopoglu</LinkStr>,
+          linkedin: <LinkStr href={profile.linkedin}>in/emirhancopoglu</LinkStr>,
         </Line>
         <Line n={4} indent={1}>
-          github: <LinkStr href={profile.github} arrow>emirhancopoglu</LinkStr>,
+          github: <LinkStr href={profile.github}>emirhancopoglu</LinkStr>,
         </Line>
         <Line n={5} indent={1}>
-          resume: <LinkStr href={profile.resume} arrow download>resume.pdf</LinkStr>,
+          resume: <LinkStr href={profile.resume} download>{t("resume_file")}</LinkStr>,
         </Line>
         <Line n={6}>{"};"}</Line>
       </Code>

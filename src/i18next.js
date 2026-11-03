@@ -9,6 +9,7 @@ const resources = {
       close_explorer: "Dosya gezginini kapat",
       switch_language: "Dili değiştir",
       toggle_theme: "Temayı değiştir",
+      resume_file: "ozgecmis.pdf",
 
       nav_readme: "readme",
       nav_projects: "projects",
@@ -68,6 +69,7 @@ const resources = {
       close_explorer: "Close file explorer",
       switch_language: "Switch language",
       toggle_theme: "Toggle theme",
+      resume_file: "resume.pdf",
 
       nav_readme: "readme",
       nav_projects: "projects",

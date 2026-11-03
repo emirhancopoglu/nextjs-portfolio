@@ -58,7 +58,7 @@ function heroLiquid(t) {
 
 const FILES = [
   { id: "profile", name: "profile.ts", lang: "TypeScript", icon: <span className="text-[10px] font-bold text-ide-file">TS</span>, lines: profileTs },
-  { id: "hero", name: "hero.liquid", lang: "Liquid", icon: <span className="text-[10px] text-ide-string">◆</span>, lines: heroLiquid },];
+  { id: "hero", name: "profile.liquid", lang: "Liquid", icon: <span className="text-[10px] text-ide-string">◆</span>, lines: heroLiquid },];
 
 function CodeLines({ lines }) {
   const padded = [...lines, ...Array(Math.max(0, LINES - lines.length)).fill(L(0, ""))];

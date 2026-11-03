@@ -53,7 +53,7 @@ export function LinkStr({ href, children, external = true, arrow = false, downlo
     >
       &quot;{children}
       {arrow && (
-        <Arrow dir={download ? "down" : "up-right"} className="ml-[0.4ch] inline-block h-[0.95em] w-[0.95em] -translate-y-px align-middle" />
+        <Arrow dir={download ? "down-to-line" : "up-right"} className="ml-[0.4ch] inline-block h-[0.95em] w-[0.95em] -translate-y-px align-middle" />
       )}
       &quot;
     </a>

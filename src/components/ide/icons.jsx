@@ -30,6 +30,13 @@ const ARROWS = {
       <path d="m19 12-7 7-7-7" />
     </>
   ),
+  "down-to-line": (
+    <>
+      <path d="M12 17V3" />
+      <path d="m6 11 6 6 6-6" />
+      <path d="M19 21H5" />
+    </>
+  ),
 };
 
 export function Arrow({ dir = "up-right", className = "h-4 w-4" }) {
