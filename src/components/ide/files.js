@@ -1,8 +1,5 @@
 import { getProject, projectFile } from "@/data/projects";
 
-/**
- * Maps a URL to the "file" the IDE shows: tab name + breadcrumb trail.
- */
 export function resolveFile(pathname) {
   const path = pathname.replace(/\/+$/, "") || "/";
 

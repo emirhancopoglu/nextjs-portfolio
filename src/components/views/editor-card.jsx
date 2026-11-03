@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-/* ---------- syntax tokens ---------- */
 const Kw = ({ children }) => <span className="text-ide-keyword">{children}</span>;
 const Id = ({ children }) => <span className="text-ide-ident">{children}</span>;
 const Key = ({ children }) => <span className="text-ide-json">{children}</span>;
@@ -15,10 +14,9 @@ const S = ({ children, q = '"' }) => (
     {q}
   </span>
 );
-// Liquid
-const D = ({ children }) => <span className="text-ide-json">{children}</span>; // {%- -%} {{ }}
+const D = ({ children }) => <span className="text-ide-json">{children}</span>;
 const LS = ({ children }) => <S q="'">{children}</S>;
-const Tag = ({ children }) => <span className="text-ide-ident">{children}</span>; // html tags
+const Tag = ({ children }) => <span className="text-ide-ident">{children}</span>;
 
 const LINES = 14;
 const L = (indent, node) => ({ indent, node });
@@ -84,7 +82,7 @@ export default function EditorCard() {
 
   return (
     <div className="overflow-hidden rounded-xl border border-ide-border bg-ide-panel text-ide-text shadow-[0_18px_40px_-28px_rgba(0,0,0,0.45)]">
-      <div role="tablist" aria-label="Files" className="ide-scroll flex overflow-x-auto border-b border-ide-border font-mono text-[12px]">
+      <div role="tablist" aria-label={t("files_tabs")} className="ide-scroll flex overflow-x-auto border-b border-ide-border font-mono text-[12px]">
         {FILES.map((f) => {
           const selected = f.id === active;
           return (
@@ -109,7 +107,6 @@ export default function EditorCard() {
         })}
       </div>
 
-      {/* All panels share one grid cell so the card height never jumps between tabs. */}
       <div className="grid bg-ide-bg px-4 py-4 font-mono text-[12.5px] leading-[1.75]">
         {FILES.map((f) => (
           <div

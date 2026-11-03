@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-// Both variants share the exact same box (height, 1px border, line-height),
-// so a primary and a ghost button side by side are always equal in height.
 const base =
   "inline-flex h-11 items-center justify-center gap-2 rounded-lg border px-4 text-[14px] leading-none transition active:scale-[0.98]";
 
@@ -12,9 +10,6 @@ const variants = {
     "border-ide-line font-mono text-ide-text hover:border-ide-muted/60 hover:bg-ide-active",
 };
 
-/**
- * Renders a next/link for internal hrefs, a plain <a> for external ones.
- */
 export function Button({ href, variant = "primary", external, download, className = "", children }) {
   const cls = `${base} ${variants[variant]} ${className}`;
   const isExternal = external ?? /^(https?:|mailto:)/.test(href);
@@ -46,5 +41,4 @@ export function Button({ href, variant = "primary", external, download, classNam
   );
 }
 
-/** Page padding shared by every editor view. */
 export const pagePad = "px-[18px] pb-12 pt-7 lg:pl-9 lg:pr-[52px] lg:pt-[26px]";

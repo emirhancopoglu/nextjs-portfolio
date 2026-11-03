@@ -128,7 +128,6 @@ export default function ProjectView({ slug }) {
   const project = getProject(slug);
   if (!project) return null;
 
-  // Code view lines; numbered in order below.
   const fields = [
     ["name", <Str key="v">{project.name}</Str>],
     ["type", <Str key="v">{t(project.type)}</Str>],
@@ -147,7 +146,6 @@ export default function ProjectView({ slug }) {
   ].filter(Boolean);
 
   return (
-    // Fills the editor area so the terminal panel can stick to its bottom on desktop.
     <div className="flex flex-col lg:min-h-[calc(100dvh-154px)]">
       <div className={`${pagePad} flex-1`}>
         <div className="grid gap-x-8 gap-y-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,530px)]">

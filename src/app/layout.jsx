@@ -17,11 +17,11 @@ const mono = JetBrains_Mono({
 
 export const metadata = {
   title: {
-    default: "Emirhan Çöpoğlu — Frontend Developer",
+    default: "Emirhan Çöpoğlu — Shopify / Frontend Developer",
     template: "%s — Emirhan Çöpoğlu",
   },
   description:
-    "Frontend Developer · React · Next.js. Hızlı, responsive ve çok dilli web siteleri.",
+    "Shopify / Frontend Developer · React · Next.js · Liquid. Shopify temaları, custom ve public uygulamalar.",
 };
 
 export const viewport = {
@@ -31,8 +31,6 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="tr" className={`${sans.variable} ${mono.variable}`} suppressHydrationWarning>
-      {/* Extensions (e.g. ColorZilla's cz-shortcut-listen) add attributes to <body>
-          before hydration; ignore those attribute diffs on this element only. */}
       <body className="font-sans antialiased" suppressHydrationWarning>
         <Providers>
           <IdeShell>{children}</IdeShell>

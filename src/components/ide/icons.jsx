@@ -1,4 +1,3 @@
-// Lucide arrows (stroke 1.5)
 const ARROWS = {
   "up-right": (
     <>
@@ -117,7 +116,6 @@ export function CloseIcon({ className = "h-4 w-4" }) {
   );
 }
 
-/** Small file-type glyph shown in the explorer. */
 export function FileGlyph({ kind }) {
   switch (kind) {
     case "readme":

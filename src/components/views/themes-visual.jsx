@@ -1,7 +1,6 @@
 "use client";
 import { useTranslation } from "react-i18next";
 
-// Brand colors for the mini storefronts (fixed, read fine on both themes).
 const STORES = [
   "#f97316", "#10b981", "#6366f1", "#ec4899",
   "#0ea5e9", "#eab308", "#8b5cf6", "#14b8a6",
@@ -12,14 +11,12 @@ const STORES = [
 function MiniStore({ color }) {
   return (
     <div className="flex aspect-[4/3] flex-col gap-[0.7cqw] rounded-[0.8cqw] border border-ide-border bg-ide-bg p-[0.9cqw] shadow-sm">
-      {/* header: logo + nav */}
       <div className="flex items-center gap-[0.6cqw]">
         <span className="h-[1.4cqw] w-[1.4cqw] rounded-[0.3cqw]" style={{ background: color }} />
         <span className="h-[0.6cqw] w-[4cqw] rounded-full bg-ide-line" />
         <span className="ml-auto h-[0.6cqw] w-[2cqw] rounded-full bg-ide-line" />
         <span className="h-[0.6cqw] w-[2cqw] rounded-full bg-ide-line" />
       </div>
-      {/* hero */}
       <div
         className="flex flex-1 flex-col justify-end gap-[0.4cqw] rounded-[0.5cqw] p-[0.8cqw]"
         style={{ background: `linear-gradient(135deg, ${color}, ${color}99)` }}
@@ -27,7 +24,6 @@ function MiniStore({ color }) {
         <span className="h-[0.7cqw] w-[45%] rounded-full bg-white/80" />
         <span className="h-[0.5cqw] w-[30%] rounded-full bg-white/60" />
       </div>
-      {/* products */}
       <div className="grid grid-cols-3 gap-[0.5cqw]">
         {[0, 1, 2].map((i) => (
           <div key={i} className="flex flex-col gap-[0.3cqw]">
@@ -49,14 +45,12 @@ export default function ThemesVisual({ className = "" }) {
       role="img"
       aria-label={t("themes_visual_alt")}
     >
-      {/* tilted wall of storefronts */}
       <div className="absolute -inset-[18%] grid rotate-[-9deg] grid-cols-4 content-center gap-[2cqw]">
         {STORES.map((c, i) => (
           <MiniStore key={i} color={c} />
         ))}
       </div>
 
-      {/* fade toward the center */}
       <div
         className="absolute inset-0"
         style={{
@@ -65,7 +59,6 @@ export default function ThemesVisual({ className = "" }) {
         }}
       />
 
-      {/* badge */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="flex flex-col items-center rounded-[2cqw] border border-ide-border bg-ide-bg px-[5cqw] py-[3cqw] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.5)]">
           <span className="flex items-center gap-[1cqw] font-mono text-[2.4cqw] text-ide-muted">

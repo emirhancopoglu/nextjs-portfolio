@@ -22,7 +22,6 @@ function ThemeToggle({ className = "" }) {
       title={t("toggle_theme")}
       className={`inline-flex items-center justify-center border border-ide-line text-ide-text transition-colors hover:border-ide-muted hover:bg-ide-active ${className}`}
     >
-      {/* Icon is chosen by CSS (html.dark) so server and client markup match. */}
       <SunIcon className="hidden h-[18px] w-[18px] dark:block" />
       <MoonIcon className="h-[18px] w-[18px] dark:hidden" />
     </button>
@@ -73,7 +72,6 @@ export default function IdeShell({ children }) {
 
   return (
     <div className="flex h-dvh flex-col bg-ide-bg text-ide-text">
-      {/* Desktop title bar */}
       <header className="hidden h-[53px] shrink-0 grid-cols-[1fr_auto_1fr] items-center border-b border-ide-border bg-ide-panel px-4 lg:grid">
         <div className="flex gap-2 pl-1" aria-hidden="true">
           <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
@@ -84,7 +82,6 @@ export default function IdeShell({ children }) {
         <ThemeToggle className="h-[34px] w-[34px] justify-self-end rounded-[7px]" />
       </header>
 
-      {/* Mobile top bar */}
       <header className="grid h-[60px] shrink-0 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 border-b border-ide-border bg-ide-panel px-3 lg:hidden">
         <button
           type="button"
@@ -118,13 +115,6 @@ export default function IdeShell({ children }) {
           </div>
 
           <div ref={scrollRef} className="ide-scroll min-h-0 flex-1 overflow-y-auto">
-            {/*
-              Page fade is a plain CSS animation (see .page-fade in globals.css):
-              - opacity only, so nothing overflows and no scrollbar flashes;
-              - no JS "commit final value" step, so no 1-frame flicker at the end
-                (framer-motion's opacity animation blinked to 0 when finishing).
-              Skipped on the first, server-rendered paint.
-            */}
             <div key={pathname} className={hasNavigated.current ? "page-fade" : undefined}>
               {children}
             </div>
@@ -134,9 +124,8 @@ export default function IdeShell({ children }) {
 
       <StatusBar />
 
-      {/* Mobile bottom navigation */}
       <nav
-        aria-label="Primary"
+        aria-label={t("nav_primary")}
         className="grid h-[80px] shrink-0 grid-cols-4 bg-ide-panel pb-[env(safe-area-inset-bottom)] lg:hidden"
       >
         {navItems.map((item) => {
@@ -159,7 +148,6 @@ export default function IdeShell({ children }) {
         })}
       </nav>
 
-      {/* Mobile explorer drawer */}
       <AnimatePresence>
         {drawerOpen && (
           <div className="fixed inset-0 z-50 lg:hidden" role="dialog" aria-modal="true" aria-label={t("explorer")}>

@@ -1,23 +1,11 @@
 import ViraGas from "@/assets/viragasnew.png";
 import NiksaMetal from "@/assets/niksametalnew.png";
-import WalletManagement from "@/assets/walletmanagementnew.png";
 import TufisPetHouse from "@/assets/tufispethousenew.png";
 import DerinWayHome from "@/assets/derinwayhomenew.png";
 import PideVakti from "@/assets/pidetime.png";
 import Positivus from "@/assets/positivus.png";
 import BlogCustomizer from "@/assets/blogcustomizer.png";
 
-// `type`, `about` and `liveLabel` are i18n keys (see src/i18next.js).
-// `checks` are the ✓ items shown in the project terminal panel.
-// Optional:
-//   ext       file extension shown in the explorer (default "tsx")
-//   file      explorer file name override (default "<slug>.<ext>")
-//   repo      null → shown as "private"
-//   live      null → no live link / button
-//   host      URL shown in the preview frame when there is no `live`
-//   meta      extra [key, value] lines in the code view
-//   cli       terminal command (default: npm run dev + next dev output)
-//   preview   "themes" → drawn visual instead of `image`
 export const projects = [
   {
     slug: "blog-customizer",
@@ -55,7 +43,7 @@ export const projects = [
     type: "type_freelance",
     stack: "React · Tailwind CSS · Framer Motion",
     about: "about_vira_gas",
-    live: "https://www.viragas.com/",
+    live: "https://viragas.com/",
     repo: "https://github.com/Dev-Capella/viragas",
     image: ViraGas,
   },
@@ -69,17 +57,6 @@ export const projects = [
     live: "https://niksametal.com/",
     repo: "https://github.com/Dev-Capella/niksa",
     image: NiksaMetal,
-  },
-  {
-    slug: "wallet",
-    checks: ["responsive", "localStorage", "dark mode"],
-    name: "Wallet Management",
-    type: "type_personal",
-    stack: "Next.js · ChartJS · MUI",
-    about: "about_wallet",
-    live: "https://walletmanagement.vercel.app/",
-    repo: "https://github.com/emirhancopoglu/wallet-management",
-    image: WalletManagement,
   },
   {
     slug: "tufis-pet-house",

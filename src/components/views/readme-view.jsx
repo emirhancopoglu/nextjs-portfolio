@@ -32,7 +32,6 @@ export default function ReadmeView() {
   return (
     <div className="flex px-5 pb-12 pt-7 lg:min-h-[calc(100dvh-154px)] lg:items-center lg:px-14 lg:py-12">
       <div className="mx-auto grid w-full max-w-[1100px] grid-cols-[minmax(0,1fr)] gap-10 xl:grid-cols-[minmax(0,1fr)_minmax(0,460px)] xl:items-center xl:gap-14">
-        {/* Left: README */}
         <article className="min-w-0">
           <p className="font-mono text-[13px] text-ide-muted lg:text-[14px]"># README.md</p>
 
@@ -76,7 +75,6 @@ export default function ReadmeView() {
           </dl>
         </article>
 
-        {/* Right: profile card + quick links */}
         <aside className="flex min-w-0 flex-col gap-3">
           <EditorCard />
           <div className="grid grid-cols-2 gap-3">

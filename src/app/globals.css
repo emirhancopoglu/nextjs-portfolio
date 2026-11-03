@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Dark palette (default) */
 :root {
   --ide-bg: #111216;
   --ide-panel: #0d0e11;
@@ -24,7 +23,6 @@
   --ide-json: #f2c36b;
 }
 
-/* Light theme — next-themes puts `light` / `dark` on <html> */
 :root.light {
   --ide-bg: #ffffff;
   --ide-panel: #f6f7f9;
@@ -66,7 +64,6 @@ body {
   outline-offset: 2px;
 }
 
-/* Editor-like scrollbars */
 .ide-scroll {
   scrollbar-width: thin;
   scrollbar-color: var(--ide-line) transparent;
@@ -97,7 +94,6 @@ body {
   animation: caret-blink 1.1s steps(1) infinite;
 }
 
-/* Links inside code / terminal: soft underline that firms up on hover */
 .ide-link {
   color: var(--ide-accent-fg);
   text-decoration-line: underline;
@@ -112,7 +108,6 @@ body {
   text-decoration-color: currentColor;
 }
 
-/* Page transition (applied to the editor content on client-side navigation) */
 @keyframes page-fade {
   from {
     opacity: 0;

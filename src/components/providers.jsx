@@ -28,8 +28,6 @@ export default function Providers({ children }) {
   }, []);
 
   return (
-    // Own storage key: the previous portfolio stored `theme=light` under the
-    // default key, which would otherwise override the dark default.
     <ThemeProvider
       attribute="class"
       defaultTheme="dark"

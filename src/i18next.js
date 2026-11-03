@@ -9,6 +9,8 @@ const resources = {
       close_explorer: "Dosya gezginini kapat",
       switch_language: "Dili değiştir",
       toggle_theme: "Temayı değiştir",
+      nav_primary: "Ana menü",
+      files_tabs: "Dosyalar",
       resume_file: "ozgecmis.pdf",
       copyright: "© Hiçbir hakkı saklı değildir (yalnızca bu portfolyo için)",
 
@@ -18,7 +20,7 @@ const resources = {
       nav_contact: "contact",
 
       readme_bio:
-        "ReactJS ve Shopify geliştirmede deneyimli bir Front-End Developer'ım. SPA geliştirme, Shopify tema özelleştirme ve custom / public uygulamalar üzerine odaklanıyorum.",
+        "ReactJS ve Shopify geliştirme alanında deneyimli bir Front-End Developer’ım. SPA’lar, Shopify tema özelleştirmeleri ve custom / public uygulamalar geliştirmeye odaklanıyorum.",
       focus_theme: "Tema özelleştirme",
       cta_label: "Birlikte çalışalım",
       stack_shopify: "shopify",
@@ -31,35 +33,33 @@ const resources = {
 
       type_freelance: "Freelance",
       type_personal: "Kişisel",
-      type_public_app: "Public App",
+      type_public_app: "Public uygulama",
       type_client_work: "Müşteri projeleri",
-      view_app_store: "App Store’da gör",
-      themes_visual_alt: "150+ Shopify mağazası temsili görseli",
-      themes_visual_label: "mağaza geliştirildi",
-      about_blog_customizer:
-        "Blog yazılarına ürün/koleksiyon kartları, SSS ve banner ekleyen; CSV ile toplu içe/dışa aktarım sunan public Shopify uygulaması.",
-      about_shopify_themes:
-        "150+ mağaza için sıfırdan tema kurulumu ve özelleştirme; özel section’lar, özellikler, storefront ve özel uygulama geliştirmeleri.",
       live_site: "Canlı site",
+      view_app_store: "App Store’da incele",
       preview_alt: "{{name}} ekran görüntüsü",
-      about_vira_gas:
-        "Gazlı amortisör üreticisi için modern, responsive, SEO uyumlu ve çok dilli kurumsal site.",
-      about_niksa_metal:
-        "Masa ve sandalye ayağı üreticisi için sıfırdan responsive tasarım ve Ant Design ürün galerisi.",
-      about_wallet:
-        "Gelir-gider takibi, ChartJS grafikleri, localStorage ve açık/koyu tema.",
-      about_tufis_pet_house:
-        "Veteriner ve köpek pansiyonu için interaktif, çok dilli ve tüm cihazlara uyumlu site.",
-      about_derin_way_home:
-        "Doğada tiny house işletmesi için responsive anasayfa, iletişim ve çok dil desteği.",
-      about_pide_vakti:
-        "Şehir ve ilçeye göre sahur, iftar vakitlerini API'den çeken Ramazan uygulaması.",
-      about_positivus:
-        "Figma tasarımından pixel perfect kodlanmış dijital ajans landing sayfası.",
+      themes_visual_alt: "150’den fazla Shopify mağazasını temsil eden görsel",
+      themes_visual_label: "mağaza geliştirildi",
 
+      about_blog_customizer:
+        "Blog yazılarına ürün ve koleksiyon kartları, SSS ve banner eklemeyi sağlayan; CSV ile toplu içe/dışa aktarım sunan public Shopify uygulaması.",
+      about_shopify_themes:
+        "150+ mağaza için sıfırdan tema kurulumu ve özelleştirme: özel section’lar, storefront özellikleri ve markalara özel uygulamalar.",
+      about_vira_gas:
+        "Gazlı yay üreticisi için modern, responsive, SEO uyumlu ve çok dilli kurumsal web sitesi.",
+      about_niksa_metal:
+        "Masa ve sandalye ayağı üreticisi için sıfırdan tasarlanan responsive site ve Ant Design ile ürün galerisi.",
+      about_tufis_pet_house:
+        "Veteriner kliniği ve köpek pansiyonu için interaktif, çok dilli ve tüm cihazlarla uyumlu web sitesi.",
+      about_derin_way_home:
+        "Doğa içinde tiny house konaklaması sunan bir işletme için çok dilli, responsive anasayfa ve iletişim sayfaları.",
+      about_pide_vakti:
+        "Şehir ve ilçeye göre sahur ve iftar vakitlerini API’den çeken Ramazan uygulaması.",
+      about_positivus:
+        "Figma tasarımından pixel-perfect olarak kodlanan dijital ajans landing sayfası.",
 
       nf_comment: "// Hata: modül bulunamadı",
-      nf_message: "// \"{{path}}\" adlı dosya bu projede yok.",
+      nf_message: "// Bu projede \"{{path}}\" adında bir dosya yok.",
     },
   },
   en: {
@@ -69,6 +69,8 @@ const resources = {
       close_explorer: "Close file explorer",
       switch_language: "Switch language",
       toggle_theme: "Toggle theme",
+      nav_primary: "Main navigation",
+      files_tabs: "Files",
       resume_file: "resume.pdf",
       copyright: "© No rights reserved (this portfolio only)",
 
@@ -78,45 +80,43 @@ const resources = {
       nav_contact: "contact",
 
       readme_bio:
-        "Front-End Developer experienced in ReactJS and Shopify development, focused on building SPAs, customizing Shopify themes, and developing custom / public apps.",
+        "I’m a front-end developer experienced in ReactJS and Shopify, focused on building SPAs, customizing Shopify themes, and developing custom and public apps.",
       focus_theme: "Theme customization",
       cta_label: "Let’s work together",
       stack_shopify: "shopify",
       stack_frontend: "frontend",
       stack_tools: "tools",
-      send_email: "Send email",
+      send_email: "Email me",
 
       projects_cmd: "$ ls ./projects",
       projects_count: "> {{count}} projects · shopify + freelance + personal",
 
       type_freelance: "Freelance",
       type_personal: "Personal",
-      type_public_app: "Public App",
+      type_public_app: "Public app",
       type_client_work: "Client work",
-      view_app_store: "View on App Store",
-      themes_visual_alt: "Illustration of 150+ Shopify stores",
-      themes_visual_label: "stores built",
-      about_blog_customizer:
-        "Public Shopify app that adds product/collection cards, FAQs and banners to blog posts, with bulk CSV import/export.",
-      about_shopify_themes:
-        "Theme setup and customization from scratch for 150+ stores: custom sections, features, storefront functionality and custom app development.",
       live_site: "Live site",
+      view_app_store: "View on the App Store",
       preview_alt: "Screenshot of {{name}}",
+      themes_visual_alt: "Illustration representing 150+ Shopify stores",
+      themes_visual_label: "stores built",
+
+      about_blog_customizer:
+        "Public Shopify app that adds product and collection cards, FAQs and banners to blog posts, with bulk CSV import/export.",
+      about_shopify_themes:
+        "Theme setup and customization from scratch for 150+ stores: custom sections, storefront features and brand-specific apps.",
       about_vira_gas:
-        "Modern, responsive, SEO-friendly and multilingual corporate site for a gas spring manufacturer.",
+        "Modern, responsive, SEO-friendly and multilingual corporate website for a gas spring manufacturer.",
       about_niksa_metal:
-        "Responsive site built from scratch for a table & chair leg manufacturer, with an Ant Design gallery.",
-      about_wallet:
-        "Income-expense tracking, ChartJS charts, localStorage and light/dark theme.",
+        "Responsive website built from scratch for a table and chair leg manufacturer, with an Ant Design product gallery.",
       about_tufis_pet_house:
-        "Interactive, multilingual, fully responsive site for a vet clinic and dog hotel.",
+        "Interactive, multilingual and fully responsive website for a vet clinic and dog boarding service.",
       about_derin_way_home:
-        "Responsive home and contact pages with multi-language support for a tiny house business.",
+        "Multilingual, responsive home and contact pages for a tiny house retreat in nature.",
       about_pide_vakti:
-        "Ramadan app that fetches sahur and iftar times by city and district from an API.",
+        "Ramadan app that pulls suhoor and iftar times by city and district from an API.",
       about_positivus:
         "Pixel-perfect digital agency landing page coded from a Figma design.",
-
 
       nf_comment: "// Error: module not found",
       nf_message: "// \"{{path}}\" does not exist in this project.",

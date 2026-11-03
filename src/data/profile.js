@@ -3,11 +3,9 @@ export const profile = {
   email: "copogluemirhan@outlook.com",
   linkedin: "https://www.linkedin.com/in/emirhancopoglu/",
   github: "https://github.com/emirhancopoglu",
-  // Served from /public; links use the `download` attribute.
   resume: "/Emirhan-Copoglu-Resume.pdf",
 };
 
-// Shown on the stack.json page.
 export const stack = {
   languages: ["HTML", "CSS", "JavaScript"],
   frameworks: ["ReactJS", "Liquid"],
@@ -23,7 +21,6 @@ export const stack = {
   tools: ["Git", "GitHub", "Bitbucket"],
 };
 
-// README stack rows. `label` is an i18n key, `tone` picks the chip color.
 export const stackGroups = [
   {
     label: "stack_shopify",

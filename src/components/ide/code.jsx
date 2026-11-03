@@ -1,9 +1,5 @@
 import { Arrow } from "./icons";
 
-/**
- * Tiny building blocks for rendering "source code" with line numbers.
- * Long lines soft-wrap with a hanging indent, like an editor with word wrap on.
- */
 export function Code({ children, className = "" }) {
   return (
     <div
@@ -45,7 +41,6 @@ export function LinkStr({ href, children, external = true, arrow = false, downlo
       ? { target: "_blank", rel: "noopener noreferrer" }
       : {};
 
-  // Quotes stay outside the link so only the value itself is underlined.
   return (
     <span className="text-ide-accent-fg">
       &quot;
