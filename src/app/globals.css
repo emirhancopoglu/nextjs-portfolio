@@ -2,30 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-/* next-themes  ~~ default light theme */
+/* Dark palette (default) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ide-bg: #111216;
+  --ide-panel: #0d0e11;
+  --ide-border: #1f2128;
+  --ide-line: #2a2d36;
+  --ide-active: #1c1f27;
+  --ide-text: #e4e6eb;
+  --ide-strong: #ffffff;
+  --ide-soft: #a3a7b1;
+  --ide-muted: #7d818c;
+  --ide-dim: #4d515c;
+  --ide-accent: #ffb454;
+  --ide-accent-fg: #ffb454;
+  --ide-ink: #16171b;
+  --ide-keyword: #c792ea;
+  --ide-ident: #82aaff;
+  --ide-string: #addb94;
+  --ide-file: #6f9cff;
+  --ide-json: #f2c36b;
 }
-/* next-themes ~~ dark theme */
-[data-theme="dark"] {
-  --background: #1a1a1d;
-  --foreground: #fafaf9;
+
+/* Light theme — next-themes puts `light` / `dark` on <html> */
+:root.light {
+  --ide-bg: #ffffff;
+  --ide-panel: #f6f7f9;
+  --ide-border: #e6e8ec;
+  --ide-line: #d5d9e0;
+  --ide-active: #eaedf2;
+  --ide-text: #24292f;
+  --ide-strong: #0d1117;
+  --ide-soft: #4b5563;
+  --ide-muted: #6b7280;
+  --ide-dim: #a9aeb8;
+  --ide-accent: #ffb454;
+  --ide-accent-fg: #b45309;
+  --ide-ink: #16171b;
+  --ide-keyword: #8250df;
+  --ide-ident: #0550ae;
+  --ide-string: #1a7f37;
+  --ide-file: #2f6feb;
+  --ide-json: #b7791f;
+}
+
+html,
+body {
+  background: var(--ide-bg);
+  color: var(--ide-text);
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
-/* Terminal CSS */
-#terminalEditor {
-  padding: 3rem;
+::selection {
+  background: var(--ide-accent);
+  color: var(--ide-ink);
 }
 
-@media screen and (max-width: 1536px) {
-  #terminalEditor {
-    padding-left: 1rem;
-    padding-right: 1rem;
+:focus-visible {
+  outline: 2px solid var(--ide-accent);
+  outline-offset: 2px;
+}
+
+/* Editor-like scrollbars */
+.ide-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ide-line) transparent;
+}
+.ide-scroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.ide-scroll::-webkit-scrollbar-thumb {
+  background: var(--ide-line);
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  border-radius: 999px;
+}
+
+@keyframes caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.caret-blink {
+  animation: caret-blink 1.1s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .caret-blink {
+    animation: none;
   }
 }

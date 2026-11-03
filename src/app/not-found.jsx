@@ -1,14 +1,7 @@
-import React from "react";
-import Contact from "@/components/contact/contact";
-import Header from "@/components/header/header";
-import NotFoundTerminalPage from "@/components/not-found-terminal/notfound-terminal";
+import NotFoundView from "@/components/views/not-found-view";
+
+export const metadata = { title: "404" };
 
 export default function NotFound() {
-  return (
-    <>
-      <Header />
-      <NotFoundTerminalPage />
-      <Contact />
-    </>
-  );
+  return <NotFoundView />;
 }

@@ -2,102 +2,122 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 const resources = {
-  en: {
-    translation: {
-      reserved: "All rights reserved.",
-      typeCommand: "Type a command and hit enter. ",
-      defaultCommand: "Default commands: ",
-      availableCommand: "Available commands: ",
-      about:
-        "Since 2023, I am a frontend developer who is experienced in web development and continues to improve himself. I am experienced in ReactJS, NextJS and Tailwind CSS. Through various freelance projects, I have been developing multilingual web pages with react-i18next, SEO optimization with React Helmet and improving the user experience using tools such as Framer Motion, Ant Design and Material UI. I am a reliable and dedicated team player.",
-      resume: "Resume prepared,",
-      resumeReview: " you can check it.",
-      backToTerminal: "Back to Terminal",
-      projects: "Projects were shown.",
-      mail: "You can contact me via,",
-      notFoundCommand: "Command not found: ",
-      ViraGasDescription:
-        "As a freelance Frontend Developer, I developed a website for a company that produces gas springs and springs.",
-      ViraGasWhatIDid:
-        "I made the existing design modern and user-friendly, responsive, SEO optimized and added multi-language support.",
-      NiksaMetalDescription:
-        "As a freelance Frontend Developer, I developed a website for a company that produces table and chair legs from profile iron and steel.",
-      NiksaMetalWhatIDid:
-        "I created a modern, responsive design from scratch. I used the Ant Design library for the product photo gallery.",
-      WhatIDid: "My Role in This Project",
-      WalletDescription:
-        "A web application that allows you to easily manage your personal budget. In this project with a minimalist design, you can personalize your categories, record your income and expenses and manage your budget.",
-      WalletWhatIDid:
-        " In the project I developed from scratch, I aimed for a minimalist and responsive design. I used the Material UI library with fixed design principles. I enabled users to save their income and expense information to localStorage. I presented income and expense data dynamically with ChartJS. I also added Light and Dark mode support.",
-      TufiDescription:
-        "I developed a modern and user-oriented website as a freelance Frontend Developer for Tufis Pet House, a business offering veterinary and dog boarding services.",
-      TufiWhatIDid:
-        "In this project, which was developed from scratch, I aimed for a modern design. I created a responsive and user-friendly interface that is compatible with all devices (mobile, tablet, desktop) according to responsive design principles. I designed dynamic and interactive elements to capture users' attention. By integrating the React i18n library, I provided multilingual support, allowing users to view the website in different languages.",
-      DerinDescription:
-        "As a freelance Frontend Developer, I developed a website for a business that offers tiny house service in nature and forest.",
-      DerinWhatIDid:
-        "I designed the Homepage and Contact pages in accordance with the requested design. I developed responsive design on all devices (mobile, tablet, desktop). I provided multilingual support by integrating the React i18n library.",
-
-      PideDescription:
-        "Made for the month of Ramadan, it dynamically pulls sahur and iftar times over the city or city, district via API and presents them to the user.",
-      PideWhatIDid:
-        "In this project developed with NextJS, I used Shadcn UI with fixed design principles. Users can see iftar and sahur times by selecting the city or city, district. As an API, a request is sent to vakit.vercel.app and the times are dynamically pulled. Light and Dark theme support is available.",
-      PositivusDescription:
-        "Positivus is a modern digital marketing agency website based on a Figma design and coded using ReactJS and Tailwind CSS. ",
-      PositivusWhatIDid:
-        "Developed with ReactJS, this web application was coded with clean code structure, pixel perfect coding and responsive design principles in mind. Although it sticks to the Figma design, some design elements and skins have been changed to adapt. The skeleton structure was designed using justify-between layout instead of justify-around.",
-
-      notFoundMessage:
-        "is not recognized as an internal or external command, to go home",
-      notFoundClick: "click here",
-    },
-  },
   tr: {
     translation: {
-      reserved: "Tüm hakları saklıdır.",
-      typeCommand: "Bir komut yaz ve enter'a tıkla. ",
-      defaultCommand: "Varsayılan komutlar: ",
-      availableCommand: "Mevcut komutlar: ",
-      about:
-        "2023 yılından beri web geliştirme konusunda tecrübeli ve kendini geliştirmeye devam eden frontend geliştiricisiyim. ReactJS, NextJS ve Tailwind CSS konusunda deneyimliyim. Çeşitli freelance projeler aracılığıyla, react-i18next ile çok dilli web sayfaları, React Helmet ile SEO optimizasyonu ve Framer Motion, Ant Design , Material UI gibi araçları kullanarak kullanıcı deneyimini geliştirmekteyim. Güvenilir ve özverili takım oyuncusuyum.",
-      resume: "Özgeçmiş hazırlandı,",
-      resumeReview: " buradan inceleyebilirsin.",
-      backToTerminal: "Terminal'e Geri Dön",
-      projects: "Projeler gösterildi.",
-      mail: "Bana buradan ulaşabilirsin, ",
-      notFoundCommand: "Komut bulunamadı: ",
-      ViraGasDescription:
-        "Frontend Developer pozisyonunda freelance olarak, gazlı amörtisör ve yay üreten firma için web sitesi geliştirdim.",
-      ViraGasWhatIDid:
-        "Mevcut tasarımı modern ve kullanıcı dostu hale getirdim, duyarlı (responsive) yapıya kavuşturdum. SEO optimizasyonu gerçekleştirdim ve çoklu dil desteği ekledim.",
-      NiksaMetalDescription:
-        "Frontend Developer pozisyonunda freelance olarak, profil demir ve çelikten masa, sandalye ayağı üreten firma için web sitesi geliştirdim.",
-      NiksaMetalWhatIDid:
-        "Sıfırdan modern, duyarlı (responsive) tasarım oluşturdum. Ürün fotoğraf galerisi için Ant Design kütüphanesini kullandım.",
-      WhatIDid: "Bu Projedeki Rolüm",
-      WalletDescription:
-        "Kişisel bütçenizi kolayca yönetmenize olanak sağlayan bir web uygulaması. Minimalist tasarıma sahip bu projede, kategorilerinizi kişiselleştirerek gelir ve giderlerinizi kaydedip bütçenizi yönetebilirsiniz.",
-      WalletWhatIDid:
-        "Sıfırdan geliştirdiğim projede, minimalist ve responsive bir tasarım hedefledim. Sabit tasarım prensipleriyle Material UI kütüphanesini kullandım. Kullanıcıların gelir-gider bilgilerini localStorage'a kaydetmelerini sağladım. ChartJS ile dinamik olarak gelir-gider verilerini görsel şekilde sundum. Ayrıca, Light ve Dark mode desteği ekledim.",
-      TufiDescription:
-        "Frontend Developer pozisyonunda freelance olarak, veteriner hizmetleri ve köpek pansiyonu hizmeti sunan bir işletme için web sitesi geliştirdim.",
-      TufiWhatIDid:
-        "Sıfırdan geliştirilen bu projede, modern bir tasarım hedefledim. Responsive tasarım ilkelerine uygun olarak tüm cihazlarda (mobil, tablet, masaüstü) uyumlu ve kullanıcı dostu arayüz geliştirdim. Kullanıcıların dikkatini çekecek dinamik ve interaktif öğeler tasarladım. React i18n kütüphanesini entegre ederek çok dilli destek sağladım , bu sayede kullanıcılar web sitesini farklı dillerde görüntüleyebilme imkanına sahip oldu.",
+      explorer: "EXPLORER",
+      open_explorer: "Dosya gezginini aç",
+      close_explorer: "Dosya gezginini kapat",
+      switch_language: "Dili değiştir",
+      toggle_theme: "Temayı değiştir",
 
-      DerinDescription:
-        "Frontend Developer pozisyonunda freelance olarak, doğa ve ormanın içinde tiny house hizmeti sunan bir işletme için web sitesi geliştirdim.",
-      DerinWhatIDid:
-        "İstenilen tasarıma uygun olarak Anasayfa ve İletişim sayfalarının tasarımlarını yaptım. Tüm cihazlarda (mobil, tablet, masaüstü) responsive tasarım geliştirdim. React i18n kütüphanesini entegre ederek çok dilli destek sağladım.",
-      PideDescription:
-        "Ramazan ayı için yapılmış, şehir veya şehir, ilçe üzerinden sahur ve iftar vakitlerini API üzerinden dinamik olarak çekerek kullanıcıya sunar.",
-      PideWhatIDid:
-        "NextJS ile geliştirilen bu projede, sabit tasarım prensipleriyle Shadcn UI kullandım. Kullanıcılar şehir veya şehir, ilçe seçerek iftar ve sahur zamanlarını görebilme imkanı sağlanıyor. API olarak vakit.vercel.app tarafına istek atılıyor ve dinamik olarak zamanlar çekiliyor. Light ve Dark theme desteği bulunmaktadır.",
-      PositivusDescription:
-        "Positivus, bir Figma tasarımından yola çıkılarak ReactJS ve Tailwind CSS kullanılarak kodlanmış modern bir dijital pazarlama ajansı sitesidir. ",
-      PositivusWhatIDid:
-        "ReactJS ile geliştirilen bu web uygulaması, temiz kod yapısı, pixel perfect coding ve responsive tasarım prensipleri göz önünde bulundurularak kodlandı. Figma tasarımına bağlı kalmakla birlikte, bazı tasarım unsurları ve görünümler, uyum sağlamak adına değiştirilmiştir. İskelet yapı olarak justify-around yerine justify-between düzeni kullanılarak tasarım yapılmıştır.",
-      notFoundMessage: "adlı dosya yolu bulunamadı. Ana dosyaya dönmek için",
-      notFoundClick: "tıklayın",
+      nav_readme: "readme",
+      nav_projects: "projects",
+      nav_stack: "stack",
+      nav_contact: "contact",
+
+      readme_bio:
+        "ReactJS ve Shopify geliştirmede deneyimli bir Front-End Developer'ım. SPA geliştirme, Shopify tema özelleştirme ve custom / public uygulamalar üzerine odaklanıyorum.",
+      focus_theme: "Tema özelleştirme",
+      cta_label: "Birlikte çalışalım",
+      stack_shopify: "shopify",
+      stack_frontend: "frontend",
+      stack_tools: "araçlar",
+      send_email: "E-posta gönder",
+
+      projects_cmd: "$ ls ./projects",
+      projects_count: "> {{count}} proje · shopify + freelance + kişisel",
+
+      type_freelance: "Freelance",
+      type_personal: "Kişisel",
+      type_public_app: "Public App",
+      type_client_work: "Müşteri projeleri",
+      view_app_store: "App Store’da gör",
+      themes_visual_alt: "150+ Shopify mağazası temsili görseli",
+      themes_visual_label: "mağaza geliştirildi",
+      about_blog_customizer:
+        "Blog yazılarına ürün/koleksiyon kartları, SSS ve banner ekleyen; CSV ile toplu içe/dışa aktarım sunan public Shopify uygulaması.",
+      about_shopify_themes:
+        "150+ mağaza için sıfırdan tema kurulumu ve özelleştirme; özel section’lar, özellikler, storefront ve özel uygulama geliştirmeleri.",
+      live_site: "Canlı site",
+      preview_alt: "{{name}} ekran görüntüsü",
+      about_vira_gas:
+        "Gazlı amortisör üreticisi için modern, responsive, SEO uyumlu ve çok dilli kurumsal site.",
+      about_niksa_metal:
+        "Masa ve sandalye ayağı üreticisi için sıfırdan responsive tasarım ve Ant Design ürün galerisi.",
+      about_wallet:
+        "Gelir-gider takibi, ChartJS grafikleri, localStorage ve açık/koyu tema.",
+      about_tufis_pet_house:
+        "Veteriner ve köpek pansiyonu için interaktif, çok dilli ve tüm cihazlara uyumlu site.",
+      about_derin_way_home:
+        "Doğada tiny house işletmesi için responsive anasayfa, iletişim ve çok dil desteği.",
+      about_pide_vakti:
+        "Şehir ve ilçeye göre sahur, iftar vakitlerini API'den çeken Ramazan uygulaması.",
+      about_positivus:
+        "Figma tasarımından pixel perfect kodlanmış dijital ajans landing sayfası.",
+
+      send_mail: "Mail gönder",
+
+      nf_comment: "// Hata: modül bulunamadı",
+      nf_message: "// \"{{path}}\" adlı dosya bu projede yok.",
+    },
+  },
+  en: {
+    translation: {
+      explorer: "EXPLORER",
+      open_explorer: "Open file explorer",
+      close_explorer: "Close file explorer",
+      switch_language: "Switch language",
+      toggle_theme: "Toggle theme",
+
+      nav_readme: "readme",
+      nav_projects: "projects",
+      nav_stack: "stack",
+      nav_contact: "contact",
+
+      readme_bio:
+        "Front-End Developer experienced in ReactJS and Shopify development, focused on building SPAs, customizing Shopify themes, and developing custom / public apps.",
+      focus_theme: "Theme customization",
+      cta_label: "Let’s work together",
+      stack_shopify: "shopify",
+      stack_frontend: "frontend",
+      stack_tools: "tools",
+      send_email: "Send email",
+
+      projects_cmd: "$ ls ./projects",
+      projects_count: "> {{count}} projects · shopify + freelance + personal",
+
+      type_freelance: "Freelance",
+      type_personal: "Personal",
+      type_public_app: "Public App",
+      type_client_work: "Client work",
+      view_app_store: "View on App Store",
+      themes_visual_alt: "Illustration of 150+ Shopify stores",
+      themes_visual_label: "stores built",
+      about_blog_customizer:
+        "Public Shopify app that adds product/collection cards, FAQs and banners to blog posts, with bulk CSV import/export.",
+      about_shopify_themes:
+        "Theme setup and customization from scratch for 150+ stores: custom sections, features, storefront functionality and custom app development.",
+      live_site: "Live site",
+      preview_alt: "Screenshot of {{name}}",
+      about_vira_gas:
+        "Modern, responsive, SEO-friendly and multilingual corporate site for a gas spring manufacturer.",
+      about_niksa_metal:
+        "Responsive site built from scratch for a table & chair leg manufacturer, with an Ant Design gallery.",
+      about_wallet:
+        "Income-expense tracking, ChartJS charts, localStorage and light/dark theme.",
+      about_tufis_pet_house:
+        "Interactive, multilingual, fully responsive site for a vet clinic and dog hotel.",
+      about_derin_way_home:
+        "Responsive home and contact pages with multi-language support for a tiny house business.",
+      about_pide_vakti:
+        "Ramadan app that fetches sahur and iftar times by city and district from an API.",
+      about_positivus:
+        "Pixel-perfect digital agency landing page coded from a Figma design.",
+
+      send_mail: "Send mail",
+
+      nf_comment: "// Error: module not found",
+      nf_message: "// \"{{path}}\" does not exist in this project.",
     },
   },
 };
