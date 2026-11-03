@@ -10,6 +10,7 @@ const resources = {
       switch_language: "Dili değiştir",
       toggle_theme: "Temayı değiştir",
       resume_file: "ozgecmis.pdf",
+      copyright: "© Hiçbir hakkı saklı değildir (yalnızca bu portfolyo için)",
 
       nav_readme: "readme",
       nav_projects: "projects",
@@ -56,7 +57,6 @@ const resources = {
       about_positivus:
         "Figma tasarımından pixel perfect kodlanmış dijital ajans landing sayfası.",
 
-      send_mail: "Mail gönder",
 
       nf_comment: "// Hata: modül bulunamadı",
       nf_message: "// \"{{path}}\" adlı dosya bu projede yok.",
@@ -70,6 +70,7 @@ const resources = {
       switch_language: "Switch language",
       toggle_theme: "Toggle theme",
       resume_file: "resume.pdf",
+      copyright: "© No rights reserved (this portfolio only)",
 
       nav_readme: "readme",
       nav_projects: "projects",
@@ -116,7 +117,6 @@ const resources = {
       about_positivus:
         "Pixel-perfect digital agency landing page coded from a Figma design.",
 
-      send_mail: "Send mail",
 
       nf_comment: "// Error: module not found",
       nf_message: "// \"{{path}}\" does not exist in this project.",

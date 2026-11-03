@@ -27,10 +27,13 @@ function LangSwitch() {
 }
 
 export default function StatusBar() {
+  const { t } = useTranslation();
+
   return (
-    <footer className="flex h-5 shrink-0 items-center justify-between bg-ide-accent px-3 font-mono text-[11px] text-ide-ink lg:h-[27px] lg:px-4 lg:text-[11.5px]">
+    <footer className="flex h-5 shrink-0 items-center justify-between gap-[2ch] bg-ide-accent px-3 font-mono text-[11px] text-ide-ink lg:h-[27px] lg:px-4 lg:text-[11.5px]">
       <span className="whitespace-nowrap">⎇ main</span>
-      <div className="flex items-center gap-[2ch]">
+      <div className="flex min-w-0 items-center gap-[2ch]">
+        <span className="hidden truncate opacity-70 sm:inline">{t("copyright")}</span>
         <LangSwitch />
         <span className="hidden lg:inline">UTF-8</span>
         <span className="hidden lg:inline">Next.js</span>

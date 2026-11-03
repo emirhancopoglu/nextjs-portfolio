@@ -1,8 +1,7 @@
 "use client";
 import { useTranslation } from "react-i18next";
 import { profile } from "@/data/profile";
-import { Button, pagePad } from "@/components/ide/buttons";
-import { Arrow } from "@/components/ide/icons";
+import { pagePad } from "@/components/ide/buttons";
 import { Code, Ident, Kw, Line, LinkStr } from "@/components/ide/code";
 
 export default function ContactView() {
@@ -32,17 +31,6 @@ export default function ContactView() {
         </Line>
         <Line n={6}>{"};"}</Line>
       </Code>
-
-      <div className="mt-6 flex flex-wrap gap-2.5 lg:pl-[calc(3ch+18px)]">
-        <Button href={`mailto:${profile.email}`}>
-          {t("send_mail")}
-          <Arrow className="h-4 w-4" />
-        </Button>
-        <Button href={profile.linkedin} variant="ghost">
-          linkedin
-          <Arrow className="h-4 w-4" />
-        </Button>
-      </div>
     </div>
   );
 }
