@@ -97,6 +97,21 @@ body {
   animation: caret-blink 1.1s steps(1) infinite;
 }
 
+/* Links inside code / terminal: soft underline that firms up on hover */
+.ide-link {
+  color: var(--ide-accent-fg);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+  transition: text-decoration-color 0.15s ease;
+}
+
+.ide-link:hover,
+.ide-link:focus-visible {
+  text-decoration-color: currentColor;
+}
+
 /* Page transition (applied to the editor content on client-side navigation) */
 @keyframes page-fade {
   from {

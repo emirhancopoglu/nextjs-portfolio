@@ -89,7 +89,7 @@ function TerminalPanel({ project }) {
             </p>
             <p className="text-ide-muted">&gt; portfolio@0.1.0 dev</p>
             <p className="pb-2 text-ide-muted">&gt; next dev</p>
-            <p className="whitespace-pre text-ide-strong">  ▲ Next.js 15.0.1</p>
+            <p className="whitespace-pre text-ide-strong">  ▲ Next.js 15.5.29</p>
             <p className="whitespace-pre pb-2 text-ide-muted">
               {"  - Local:        "}
               <span className="text-ide-ident">http://localhost:3000</span>
@@ -112,7 +112,7 @@ function TerminalPanel({ project }) {
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-ide-accent-fg underline underline-offset-[3px]"
+              className="ide-link"
             >
               {displayUrl(project.live)}
             </a>

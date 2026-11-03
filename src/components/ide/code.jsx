@@ -45,17 +45,17 @@ export function LinkStr({ href, children, external = true, arrow = false, downlo
       ? { target: "_blank", rel: "noopener noreferrer" }
       : {};
 
+  // Quotes stay outside the link so only the value itself is underlined.
   return (
-    <a
-      href={href}
-      {...linkProps}
-      className="text-ide-accent-fg underline decoration-1 underline-offset-[3px]"
-    >
-      &quot;{children}
-      {arrow && (
-        <Arrow dir={download ? "down-to-line" : "up-right"} className="ml-[0.4ch] inline-block h-[0.95em] w-[0.95em] -translate-y-px align-middle" />
-      )}
+    <span className="text-ide-accent-fg">
       &quot;
-    </a>
+      <a href={href} {...linkProps} className="ide-link">
+        {children}
+        {arrow && (
+          <Arrow dir={download ? "down-to-line" : "up-right"} className="ml-[0.4ch] inline-block h-[0.95em] w-[0.95em] -translate-y-px align-middle" />
+        )}
+      </a>
+      &quot;
+    </span>
   );
 }
