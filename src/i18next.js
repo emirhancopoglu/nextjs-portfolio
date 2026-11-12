@@ -12,6 +12,8 @@ const resources = {
       nav_primary: "Ana menü",
       files_tabs: "Dosyalar",
       resume_file: "ozgecmis.pdf",
+      resume_href: "/Emirhan-Copoglu-Ozgecmis.pdf",
+      resume_download: "Emirhan Çöpoğlu Özgeçmiş.pdf",
       copyright: "© Hiçbir hakkı saklı değildir (yalnızca bu portfolyo için)",
 
       nav_readme: "readme",
@@ -72,6 +74,8 @@ const resources = {
       nav_primary: "Main navigation",
       files_tabs: "Files",
       resume_file: "resume.pdf",
+      resume_href: "/Emirhan-Copoglu-CV.pdf",
+      resume_download: "Emirhan Copoglu CV.pdf",
       copyright: "© No rights reserved (this portfolio only)",
 
       nav_readme: "readme",

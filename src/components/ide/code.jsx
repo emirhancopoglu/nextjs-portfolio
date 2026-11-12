@@ -36,7 +36,7 @@ export const Comment = ({ children }) => <span className="text-ide-muted">{child
 
 export function LinkStr({ href, children, external = true, arrow = false, download = false }) {
   const linkProps = download
-    ? { download: true }
+    ? { download }
     : external
       ? { target: "_blank", rel: "noopener noreferrer" }
       : {};

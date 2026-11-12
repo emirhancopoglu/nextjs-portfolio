@@ -53,7 +53,7 @@ export default function ReadmeView() {
             <Button href="/projects" className="!h-[50px] !font-mono !text-[15px] !font-bold sm:px-7">
               open ./projects
             </Button>
-            <Button href={profile.resume} download variant="ghost" className="!h-[50px] !text-[15px] sm:px-7">
+            <Button href={t("resume_href")} download={t("resume_download")} variant="ghost" className="!h-[50px] !text-[15px] sm:px-7">
               {t("resume_file")}
               <Arrow dir="down-to-line" className="h-4 w-4" />
             </Button>

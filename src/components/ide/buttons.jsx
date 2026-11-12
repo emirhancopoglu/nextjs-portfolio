@@ -16,7 +16,7 @@ export function Button({ href, variant = "primary", external, download, classNam
 
   if (download) {
     return (
-      <a href={href} download className={cls}>
+      <a href={href} download={download} className={cls}>
         {children}
       </a>
     );

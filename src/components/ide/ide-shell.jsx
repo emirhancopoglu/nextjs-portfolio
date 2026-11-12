@@ -58,10 +58,41 @@ export default function IdeShell({ children }) {
   const hasNavigated = useRef(false);
   if (pathname !== firstPath.current) hasNavigated.current = true;
 
+  const [headerHidden, setHeaderHidden] = useState(false);
+
   useEffect(() => {
     setDrawerOpen(false);
+    setHeaderHidden(false);
     scrollRef.current?.scrollTo({ top: 0 });
   }, [pathname]);
+
+  // Mobile only: hide the header while scrolling down, reveal it on scroll up.
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const mq = window.matchMedia("(min-width: 1024px)");
+    let lastY = el.scrollTop;
+
+    const onScroll = () => {
+      if (mq.matches) return;
+      const maxY = el.scrollHeight - el.clientHeight;
+      const y = Math.min(Math.max(el.scrollTop, 0), maxY); // ignore iOS overscroll bounce
+      const delta = y - lastY;
+      if (y < 60) setHeaderHidden(false);
+      else if (delta > 6) setHeaderHidden(true);
+      else if (delta < -6) setHeaderHidden(false);
+      else return;
+      lastY = y;
+    };
+
+    const onBreakpoint = () => mq.matches && setHeaderHidden(false);
+    el.addEventListener("scroll", onScroll, { passive: true });
+    mq.addEventListener("change", onBreakpoint);
+    return () => {
+      el.removeEventListener("scroll", onScroll);
+      mq.removeEventListener("change", onBreakpoint);
+    };
+  }, []);
 
   useEffect(() => {
     if (!drawerOpen) return;
@@ -82,24 +113,29 @@ export default function IdeShell({ children }) {
         <ThemeToggle className="h-[34px] w-[34px] justify-self-end rounded-[7px]" />
       </header>
 
-      <header className="grid h-[60px] shrink-0 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 border-b border-ide-border bg-ide-panel px-3 lg:hidden">
-        <button
-          type="button"
-          onClick={() => setDrawerOpen(true)}
-          aria-label={t("open_explorer")}
-          aria-expanded={drawerOpen}
-          className="flex h-11 w-11 items-center justify-center rounded-[9px] border border-ide-line text-ide-text"
+      <div className="relative flex min-h-0 flex-1">
+        <header
+          onFocusCapture={() => setHeaderHidden(false)}
+          className={`absolute inset-x-0 top-0 z-20 grid h-[60px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 border-b border-ide-border bg-ide-panel px-3 transition-transform duration-200 ease-out motion-reduce:transition-none lg:hidden ${
+            headerHidden ? "-translate-y-full" : "translate-y-0"
+          }`}
         >
-          <FolderIcon />
-        </button>
-        <div className="flex min-w-0 flex-col items-center gap-0.5 text-center font-mono leading-tight">
-          <span className="max-w-full truncate text-[13.5px] text-ide-strong">{file.name}</span>
-          <Breadcrumb crumbs={file.crumbs} className="max-w-full text-[10.5px] text-ide-muted" />
-        </div>
-        <ThemeToggle className="h-11 w-11 rounded-[9px]" />
-      </header>
+          <button
+            type="button"
+            onClick={() => setDrawerOpen(true)}
+            aria-label={t("open_explorer")}
+            aria-expanded={drawerOpen}
+            className="flex h-11 w-11 items-center justify-center rounded-[9px] border border-ide-line text-ide-text"
+          >
+            <FolderIcon />
+          </button>
+          <div className="flex min-w-0 flex-col items-center gap-0.5 text-center font-mono leading-tight">
+            <span className="max-w-full truncate text-[13.5px] text-ide-strong">{file.name}</span>
+            <Breadcrumb crumbs={file.crumbs} className="max-w-full text-[10.5px] text-ide-muted" />
+          </div>
+          <ThemeToggle className="h-11 w-11 rounded-[9px]" />
+        </header>
 
-      <div className="flex min-h-0 flex-1">
         <aside className="ide-scroll hidden w-[232px] shrink-0 overflow-y-auto border-r border-ide-border bg-ide-panel lg:block">
           <Explorer />
         </aside>
@@ -114,7 +150,7 @@ export default function IdeShell({ children }) {
             <Breadcrumb crumbs={file.crumbs} />
           </div>
 
-          <div ref={scrollRef} className="ide-scroll min-h-0 flex-1 overflow-y-auto">
+          <div ref={scrollRef} className="ide-scroll min-h-0 flex-1 overflow-y-auto pt-[60px] lg:pt-0">
             <div key={pathname} className={hasNavigated.current ? "page-fade" : undefined}>
               {children}
             </div>

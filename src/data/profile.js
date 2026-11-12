@@ -3,7 +3,6 @@ export const profile = {
   email: "copogluemirhan@outlook.com",
   linkedin: "https://www.linkedin.com/in/emirhancopoglu/",
   github: "https://github.com/emirhancopoglu",
-  resume: "/Emirhan-Copoglu-Resume.pdf",
 };
 
 export const stack = {

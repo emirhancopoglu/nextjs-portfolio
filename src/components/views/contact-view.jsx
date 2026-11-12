@@ -27,7 +27,11 @@ export default function ContactView() {
           github: <LinkStr href={profile.github}>emirhancopoglu</LinkStr>,
         </Line>
         <Line n={5} indent={1}>
-          resume: <LinkStr href={profile.resume} download>{t("resume_file")}</LinkStr>,
+          resume:{" "}
+          <LinkStr href={t("resume_href")} download={t("resume_download")}>
+            {t("resume_file")}
+          </LinkStr>
+          ,
         </Line>
         <Line n={6}>{"};"}</Line>
       </Code>
