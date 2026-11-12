@@ -76,24 +76,30 @@ function TerminalPanel({ project }) {
         <span className="pb-1.5 text-ide-muted">OUTPUT</span>
       </div>
       <div className="space-y-0.5 px-5 pb-4 pt-3 leading-[1.6] lg:px-9">
-        {project.cli ? (
+        {project.cli && (
           <p className="break-words pb-2">
             <Prompt />
             {project.cli}
           </p>
-        ) : (
+        )}
+        {project.dev && (
           <>
             <p className="break-words">
               <Prompt />
-              npm run dev --project {project.slug}
+              npm run dev
             </p>
-            <p className="text-ide-muted">&gt; portfolio@0.1.0 dev</p>
-            <p className="pb-2 text-ide-muted">&gt; next dev</p>
-            <p className="whitespace-pre text-ide-strong">  ▲ Next.js 15.5.29</p>
-            <p className="whitespace-pre pb-2 text-ide-muted">
-              {"  - Local:        "}
-              <span className="text-ide-ident">http://localhost:3000</span>
+            <p className="break-words text-ide-muted">&gt; {project.dev.script}</p>
+            <p className="break-words pb-2 text-ide-muted">&gt; {project.dev.cmd}</p>
+            <p className={`whitespace-pre-wrap text-ide-strong ${project.dev.local ? "" : "pb-2"}`}>
+              {"  "}
+              {project.dev.banner}
             </p>
+            {project.dev.local && (
+              <p className="whitespace-pre pb-2 text-ide-muted">
+                {"  - Local:        "}
+                <span className="text-ide-ident">{project.dev.local}</span>
+              </p>
+            )}
           </>
         )}
         <p className="break-words text-ide-string">✓ Compiled successfully · {project.stack}</p>

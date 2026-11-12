@@ -38,6 +38,7 @@ export const projects = [
   },
   {
     slug: "vira-gas",
+    dev: { script: "dev", cmd: "mix", banner: "⚛ React 18 · Laravel Mix 6" },
     checks: ["responsive", "TR · EN"],
     name: "Vira Gas Springs",
     type: "type_freelance",
@@ -49,6 +50,7 @@ export const projects = [
   },
   {
     slug: "niksa-metal",
+    dev: { script: "dev", cmd: "mix", banner: "⚛ React 18 · Laravel Mix 6" },
     checks: ["responsive", "Ant Design gallery"],
     name: "Niksa Metal",
     type: "type_freelance",
@@ -60,6 +62,7 @@ export const projects = [
   },
   {
     slug: "tufis-pet-house",
+    dev: { script: "dev", cmd: "mix", banner: "⚛ React 18 · Laravel Mix 6" },
     checks: ["responsive", "i18n"],
     name: "Tufi's Pet House",
     type: "type_freelance",
@@ -71,6 +74,7 @@ export const projects = [
   },
   {
     slug: "derin-way-home",
+    dev: { script: "dev", cmd: "mix", banner: "⚛ React 18 · Laravel Mix 6" },
     checks: ["responsive", "i18n"],
     name: "Derin Way Home",
     type: "type_freelance",
@@ -82,6 +86,12 @@ export const projects = [
   },
   {
     slug: "pide-vakti",
+    dev: {
+      script: "pide-time@0.1.0 dev",
+      cmd: "next dev",
+      banner: "▲ Next.js 15.2.1 · React 19",
+      local: "http://localhost:3000",
+    },
     checks: ["API", "dark mode"],
     name: "Pide Vakti",
     type: "type_personal",
@@ -93,6 +103,12 @@ export const projects = [
   },
   {
     slug: "positivus",
+    dev: {
+      script: "landing-page@0.0.0 dev",
+      cmd: "vite",
+      banner: "⚡ Vite 6 · React 19",
+      local: "http://localhost:5173/",
+    },
     checks: ["responsive", "pixel perfect"],
     name: "Positivus Landing Page",
     type: "type_personal",
