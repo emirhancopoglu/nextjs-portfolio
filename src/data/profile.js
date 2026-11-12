@@ -22,6 +22,11 @@ export const stack = {
 
 export const stackGroups = [
   {
+    label: "stack_frontend",
+    tone: "frontend",
+    items: ["ReactJS", "JavaScript", "HTML/CSS", "Tailwind", "Bootstrap"],
+  },
+  {
     label: "stack_shopify",
     tone: "shopify",
     items: [
@@ -33,11 +38,6 @@ export const stackGroups = [
       "Theme App Extensions",
       "Prisma",
     ],
-  },
-  {
-    label: "stack_frontend",
-    tone: "frontend",
-    items: ["ReactJS", "JavaScript", "HTML/CSS", "Tailwind", "Bootstrap"],
   },
   { label: "stack_tools", tone: "tools", items: ["Git", "GitHub", "Bitbucket"] },
 ];

@@ -11,6 +11,8 @@ const chipTone = {
   tools: "bg-[#e8f0fe] text-[#1d4ed8] dark:bg-[#82aaff]/10 dark:text-ide-ident",
 };
 
+const MIN_CHIPS_PER_HALF = 6;
+
 function LinkCard({ href, label, children, external }) {
   return (
     <a
@@ -60,18 +62,33 @@ export default function ReadmeView() {
           </div>
 
           <dl className="mt-8 space-y-2.5 border-t border-ide-border pt-6 font-mono text-[12px]">
-            {stackGroups.map((group) => (
-              <div key={group.label} className="flex items-start gap-3">
-                <dt className="w-[68px] shrink-0 pt-[5px] text-ide-muted">{t(group.label)}</dt>
-                <dd className="flex flex-wrap gap-1.5">
-                  {group.items.map((item) => (
-                    <span key={item} className={`rounded-md px-2 py-1 ${chipTone[group.tone]}`}>
-                      {item}
-                    </span>
-                  ))}
-                </dd>
-              </div>
-            ))}
+            {stackGroups.map((group, i) => {
+              // Each half of the marquee must be wider than the row, so short groups repeat.
+              const reps = Math.ceil(MIN_CHIPS_PER_HALF / group.items.length);
+              const half = Array.from({ length: reps }, () => group.items).flat();
+              return (
+                <div key={group.label} className="flex items-start gap-3">
+                  <dt className="w-[68px] shrink-0 pt-[5px] text-ide-muted">{t(group.label)}</dt>
+                  {/* Mobile: single-row infinite marquee. md+: wrapped chips; repeats are aria-hidden and hidden. */}
+                  <dd className="chip-marquee min-w-0 flex-1">
+                    <div
+                      className={`chip-track ${i % 2 ? "chip-track--reverse" : ""}`}
+                      style={{ "--marquee-duration": `${half.length * 3.5}s` }}
+                    >
+                      {[...half, ...half].map((item, j) => (
+                        <span
+                          key={j}
+                          aria-hidden={j >= group.items.length || undefined}
+                          className={`mr-1.5 shrink-0 whitespace-nowrap rounded-md px-2 py-1 ${chipTone[group.tone]}`}
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </dd>
+                </div>
+              );
+            })}
           </dl>
         </article>
 
