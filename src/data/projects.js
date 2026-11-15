@@ -3,6 +3,7 @@ import NiksaMetal from "@/assets/niksametalnew.png";
 import TufisPetHouse from "@/assets/tufispethousenew.png";
 import DerinWayHome from "@/assets/derinwayhomenew.png";
 import PideVakti from "@/assets/pidetime.png";
+import PideVaktiLight from "@/assets/pidetime-light.png";
 import Positivus from "@/assets/positivus.png";
 import BlogCustomizer from "@/assets/blogcustomizer.png";
 
@@ -100,6 +101,7 @@ export const projects = [
     live: "https://pidetime.vercel.app/ara",
     repo: "https://github.com/emirhancopoglu/pide-time",
     image: PideVakti,
+    imageLight: PideVaktiLight,
   },
   {
     slug: "positivus",

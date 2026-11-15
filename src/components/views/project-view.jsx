@@ -11,15 +11,21 @@ export function ProjectPreview({ project, sizes, priority = false, className = "
   const { t } = useTranslation();
 
   if (project.preview === "themes") return <ThemesVisual className={className} />;
+
+  const imageProps = {
+    alt: t("preview_alt", { name: project.name }),
+    placeholder: "blur",
+    sizes,
+    priority,
+  };
+  const base = `aspect-[16/10] w-full object-cover object-top ${className}`;
+
+  if (!project.imageLight) return <Image src={project.image} {...imageProps} className={base} />;
   return (
-    <Image
-      src={project.image}
-      alt={t("preview_alt", { name: project.name })}
-      placeholder="blur"
-      sizes={sizes}
-      className={`aspect-[16/10] w-full object-cover object-top ${className}`}
-      priority={priority}
-    />
+    <>
+      <Image src={project.imageLight} {...imageProps} className={`${base} dark:hidden`} />
+      <Image src={project.image} {...imageProps} className={`${base} hidden dark:block`} />
+    </>
   );
 }
 
